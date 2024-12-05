@@ -10,10 +10,12 @@
     height: 100vh; 
     overflow: hidden; 
     background-color: rgba(0, 0, 0, 1);
+    /* z-index: 1;  */
 }
 
 
 .hero {
+    position: fixed; /* Keeps the hero in view during its section */
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -21,6 +23,7 @@
     justify-content: center;
     overflow: hidden;
     padding: 0 20px; 
+   
 }
 
 .heroContent {
@@ -32,12 +35,18 @@
     text-align: center;
     padding: 20px 40px;
     border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+  
+  
+    /* z-index: 1;  */
 }
 
 .heroContent h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #deae66;
+    
 }
 
 .heroContent p {
@@ -45,6 +54,49 @@
     color: #fff;
 }
 
+/* Styles for the outer container */
+.scrollContainer {
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px; /* Default for larger screens */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    
+  }
+  
+  /* For small screens, adjust bottom spacing */
+  /* @media (max-width: 640px) {
+    .scrollContainer {
+      bottom: 10px;
+    }
+  } */
+  
+  /* Wrapper for the scroll animation */
+  .scrollWrapper {
+    width: 10px;
+    height: 30px;
+    border-radius: 20px; /* Equivalent to rounded-3xl */
+    border: 1px solid white; /* Adjust color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 8px; /* Equivalent to p-2 */
+    
+  }
+  
+  /* The animated scroll dot */
+  .scrollDot {
+    width: 6px; /* Equivalent to w-3 */
+    height: 6px; /* Equivalent to h-3 */
+    border-radius: 50%; /* Equivalent to rounded-full */
+    margin-bottom: 4px; /* Equivalent to mb-1 */
+    background-color: white; /* Adjust color as needed */
+  }
+  
 
 /* .products {
     display: flex;

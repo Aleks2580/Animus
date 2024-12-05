@@ -12,8 +12,10 @@ function App() {
         <>
         <HeroSection />
         
-      
-        <Products />
+      <div id='products'>
+      <Products  />
+      </div>
+        
 
     
         <Routes>
