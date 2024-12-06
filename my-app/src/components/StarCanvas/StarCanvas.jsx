@@ -31,13 +31,13 @@ const Stars = (props) => {
 const StarCanvas = () => {
   return (
     <div className={styles.starsCanvas}>
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <Stars />
-        <Preload all />
-      </Suspense>
-    </Canvas>
-  </div>
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <Suspense fallback={null}>
+          <Stars />
+          <Preload all />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 };
 
