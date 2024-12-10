@@ -1,0 +1,25 @@
+.container {
+    position: sticky;
+   width: 100vw;
+   background-color: black;
+   height: 5vh;
+}
+
+.wrapper {
+    margin: 0px 100px 0 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}

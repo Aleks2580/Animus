@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import i18n from "i18next";
 import HeroSection from './components/HeroSection/Hero';
-import Products from './components/Products/Products';
+import Products from './components/About/About';
 import './App.css';
 import styles from './App.module.css'
+import Navbar from './components/Navbar/Navbar';
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
     return (
     <>
      <span className={styles.language} onClick={handleLanguage}>{selectedLanguage === "EN" ? "中文" : "EN"}</span>
+     <Navbar/>
     <HeroSection />
-      <div id='products'>
+      <div id='about'>
       <Products  />
       </div>
         {/* <Routes>

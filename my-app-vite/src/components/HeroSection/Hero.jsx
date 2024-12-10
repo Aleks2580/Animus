@@ -8,7 +8,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
     return (
         <div className={styles.container}>
-          <img className={styles.logo} src="../logo.png" alt="" />
+          
         <div className={styles.hero}>
           <div className={styles.heroContent}>
           <h1>{t("hero.title")}</h1>
@@ -16,7 +16,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.scrollContainer}>
-      <a href="#products">
+      <a href="#about">
         <div className={styles.scrollWrapper}>
           <motion.div
             animate={{ y: [0, 24, 0] }}

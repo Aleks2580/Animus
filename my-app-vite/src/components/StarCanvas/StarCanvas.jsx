@@ -41,4 +41,4 @@ const StarCanvas = () => {
   );
 };
 
-export default StarCanvas;
+export default React.memo(StarCanvas);
