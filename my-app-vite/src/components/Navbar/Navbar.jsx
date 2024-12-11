@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Navbar.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -7,11 +8,11 @@ export default function Navbar() {
         <div className={styles.wrapper}>
         <img className={styles.logo} src="../logo.png" alt="" />
         <nav className={styles.navbar}>
-            <span>PRODUCTS</span>
-            <span>DELIVERY</span>
-            <span>ABOUT US</span>
-            <span>BLOG</span>
-            <span>REVIEWES</span>
+            <Link to='/products'>Products</Link>
+            <span>How to order</span>
+            <span>About us</span>
+            <span>Blog</span>
+            <span>Promotions</span>
         </nav>
         </div>
         

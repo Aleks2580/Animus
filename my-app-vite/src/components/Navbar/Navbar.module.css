@@ -1,8 +1,10 @@
 .container {
-    position: sticky;
+   position: fixed;
    width: 100vw;
    background-color: black;
-   height: 5vh;
+   height: 10vh;
+   z-index: 50;
+   top: 0;
 }
 
 .wrapper {
@@ -11,10 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vh;
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
+    height: 60px;
 }
 
 .navbar {
