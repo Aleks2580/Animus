@@ -16,7 +16,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.scrollContainer}>
-      <a href="#about">
+      <a href="#subhero">
         <div className={styles.scrollWrapper}>
           <motion.div
             animate={{ y: [0, 24, 0] }}

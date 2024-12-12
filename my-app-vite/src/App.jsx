@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import i18n from "i18next";
 import HeroSection from "./components/HeroSection/Hero";
-import About from "./components/About/About";
+import SubHero from "./components/SubHero/SubHero";
 import "./App.css";
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import { FloatButton } from "antd";
 import Footer from "./components/Footer/Footer";
 import Products from "./components/Products/Products";
+import ContactIcons from "./components/ContactIcons/ContactIcons";
 
 function Layout() {
   return (
@@ -16,6 +17,7 @@ function Layout() {
       <Navbar />
       <Outlet />
       <Footer />
+      <ContactIcons/>
     </>
   );
 }
@@ -37,23 +39,16 @@ function App() {
       <span className={styles.language} onClick={handleLanguage}>
         {selectedLanguage === "EN" ? "中文" : "EN"}
       </span>
-      
-      {/* <HeroSection />
-      <div id="about">
-        <About />
-      </div> */}
-    
-      <FloatButton.BackTop />
 
       <Routes>
         <Route path="/" element={<Layout />}>
-        <Route
+          <Route
             index
             element={
               <>
                 <HeroSection />
-                <div id="about">
-                  <About />
+                <div id="subhero">
+                  <SubHero />
                 </div>
               </>
             }
@@ -61,6 +56,7 @@ function App() {
           <Route path="products" element={<Products />} />
         </Route>
       </Routes>
+      <FloatButton.BackTop className={styles.floatButton} />
     </>
   );
 }

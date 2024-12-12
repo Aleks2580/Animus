@@ -2,5 +2,15 @@
     "hero": {
       "title": "Unlock Your Potential",
       "description": "Empower your mind with clarity, focus, and boundless creativity."
+    },
+    "navbar": {
+      "products": "PRODUCTS",
+      "about": "ABOUT US",
+      "how_to_order": "HOW TO ORDER",
+      "blog": "BLOG",
+      "faq": "FAQ"
+    },
+    "footer": {
+      "content": "This is informational content only. Please consult your doctor before making any health-related decisions."
     }
   }

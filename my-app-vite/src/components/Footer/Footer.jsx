@@ -1,8 +1,13 @@
-import React from 'react'
-import styles from './Footer.module.css'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
-    <div className={styles.footer}>This is informational content only. Please consult your doctor before making any health-related decisions.</div>
-  )
+    <div className={styles.footer}>
+      {t('footer.content')}
+    </div>
+  );
 }

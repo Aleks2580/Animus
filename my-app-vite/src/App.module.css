@@ -3,8 +3,12 @@
     top: 5px;
     right: 10px;
     color: #a8a7a7;
-    z-index: 20;
+    z-index: 51;
     font-size: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.floatButton {
+    margin-bottom: 100px;
 }

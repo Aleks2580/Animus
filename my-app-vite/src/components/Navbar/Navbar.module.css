@@ -22,8 +22,13 @@
 }
 
 .navbar {
-    color: #ffffff;
+   
     display: flex;
     justify-content: space-between;
     width: 40vw;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
 }

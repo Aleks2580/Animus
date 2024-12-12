@@ -1,0 +1,14 @@
+.container {
+    position: fixed;
+    bottom: 0; /* Fixes it to the bottom of the viewport */
+    right: 0;
+    z-index: 100; /* Keeps it above other elements */
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+}
