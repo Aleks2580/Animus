@@ -1,16 +1,27 @@
 {
-    "hero": {
-      "title": "Unlock Your Potential",
-      "description": "Empower your mind with clarity, focus, and boundless creativity."
-    },
-    "navbar": {
-      "products": "PRODUCTS",
-      "about": "ABOUT US",
-      "how_to_order": "HOW TO ORDER",
-      "blog": "BLOG",
-      "faq": "FAQ"
-    },
-    "footer": {
-      "content": "This is informational content only. Please consult your doctor before making any health-related decisions."
+  "hero": {
+    "title": "Unlock Your Potential",
+    "description": "Empower your brain with clarity, focus, and boundless creativity."
+  },
+  "navbar": {
+    "products": "Products",
+    "about": "About Us",
+    "how_to_order": "How to Order",
+    "blog": "Blog",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "content": "This content is for informational purposes only. Please consult your doctor before making any health-related decisions."
+  },
+  "subhero": {
+    "title": "Fuel Your Brain, Elevate Your Life",
+    "subtitle": "Welcome to Project V, your gateway to nootropics and innovative solutions for memory, focus, and brain health. Unlock your cognitive potential and redefine what your mind can achieve.",
+    "icons": {
+      "memory": "Memory",
+      "focus": "Focus",
+      "calm": "Calm",
+      "energy": "Energy",
+      "wellness": "Wellness"
     }
   }
+}
