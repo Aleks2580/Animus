@@ -10,6 +10,7 @@ import { FloatButton } from "antd";
 import Footer from "./components/Footer/Footer";
 import Products from "./components/Products/Products";
 import ContactIcons from "./components/ContactIcons/ContactIcons";
+import ProductPage from "./components/Products/ProductPage";
 
 function Layout() {
   return (
@@ -54,6 +55,7 @@ function App() {
             }
           />
           <Route path="products" element={<Products />} />
+          <Route path="products/:productId" element={<ProductPage />} />
         </Route>
       </Routes>
       <FloatButton.BackTop className={styles.floatButton} />

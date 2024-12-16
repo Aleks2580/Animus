@@ -1,0 +1,28 @@
+.productPage {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .error {
+    padding: 20px;
+    color: red;
+    text-align: center;
+  }
+  

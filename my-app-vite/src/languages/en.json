@@ -23,5 +23,27 @@
       "energy": "Energy",
       "wellness": "Wellness"
     }
+  },
+  "products": {
+    "fenotropil": {
+      "name": "Fenotropil",
+      "description": "A cognitive enhancer for focus and energy."
+    },
+    "semax": {
+      "name": "Semax",
+      "description": "Neuropeptide for memory and brain health."
+    },
+    "irs19": {
+      "name": "IRS-19",
+      "description": "Immune system support for a healthier you."
+    },
+    "noopept": {
+      "name": "Noopept",
+      "description": "Boost cognition and protect your brain."
+    },
+    "alpha_gpc": {
+      "name": "Alpha GPC",
+      "description": "Enhance memory and support brain health."
+    }
   }
 }

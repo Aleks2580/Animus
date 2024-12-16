@@ -23,5 +23,27 @@
       "energy": "能量",
       "wellness": "健康"
     }
+  },
+  "products": {
+    "fenotropil": {
+      "name": "Fenotropil",
+      "description": "专注和能量的认知增强剂。"
+    },
+    "semax": {
+      "name": "Semax",
+      "description": "用于记忆力和大脑健康的神经肽。"
+    },
+    "irs19": {
+      "name": "IRS-19",
+      "description": "支持免疫系统，助力更健康的你。"
+    },
+    "noopept": {
+      "name": "Noopept",
+      "description": "提升认知能力并保护大脑。"
+    },
+    "alpha_gpc": {
+      "name": "Alpha GPC",
+      "description": "增强记忆力并支持大脑健康。"
+    }
   }
 }
