@@ -1,28 +1,132 @@
 .productPage {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-  }
-  
-  .image {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .name {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
-  .error {
-    padding: 20px;
-    color: red;
-    text-align: center;
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.productSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.imageWrapper {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image {
+  width: 300px;
+  height: 450px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.productDetails {
+  flex: 2;
+}
+
+.name {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.priceSection {
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00A1D6;
+}
+
+.inStock {
+  font-size: 18px;
+  color: green;
+  margin-left: 10px;
+}
+
+.quantity {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.cartSection {
+  margin-top: 20px;
+}
+
+.addToCart {
+  background-color: #00A1D6;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addToCart:hover {
+  background-color: #008c96;
+}
+
+.moreOptions {
+  margin-top: 10px;
+}
+
+.buyMore {
+  font-size: 16px;
+  color: #00A1D6;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buyMore:hover {
+  text-decoration: underline;
+}
+
+.tabs {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabButton {
+  font-size: 18px;
+  background: none;
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabButton:hover {
+  background-color: #f1f1f1;
+}
+
+.productInfo {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.productInfo h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.productInfo p {
+  font-size: 16px;
+  color: #444;
+}
