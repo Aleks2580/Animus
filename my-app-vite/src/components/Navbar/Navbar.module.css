@@ -1,7 +1,7 @@
 .container {
    position: fixed;
    width: 100vw;
-   background-color: black;
+   background-color: #000000;
    height: 10vh;
    z-index: 50;
    top: 0;
