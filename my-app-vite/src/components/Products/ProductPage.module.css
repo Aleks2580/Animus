@@ -137,12 +137,12 @@ button {
   text-decoration: none;
 }
 
-.tabs {
+ .tabs {
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin: 40px auto 0; /* Align to center and add spacing */
-  padding: 20px;
+  margin: 40px auto 0; 
+  /* padding: 20px; */
 }
 
 .tabButton {
@@ -159,11 +159,11 @@ button {
 .tabButton:hover {
   background-color: #deae66;
   color: #1d1d1d;
-}
+}  
 
 .productInfo {
-  max-width: 1000px; /* Matches the combined width of the image + details */
-  margin: 40px auto 0; /* Align to center and add spacing */
+  max-width: 1000px !important; /* Matches the combined width of the image + details */
+  margin: auto 0; /* Align to center and add spacing */
   padding: 20px;
   background-color: #2a2a2a; /* Subtle background for readability */
   border-radius: 10px;
@@ -186,3 +186,33 @@ button {
 .productInfo p {
   margin-bottom: 20px; /* Consistent spacing between paragraphs */
 }
+
+/* .customTabs .ant-tabs-nav {
+  max-width: 1000px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  text-wrap: wrap;
+}
+
+.customTabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d1d1d;
+  padding: 10px 20px;
+  border: 1px solid #deae66;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.customTabs .ant-tabs-tab-active {
+  background-color: #deae66 !important;
+  color: #fff;
+}
+
+.customTabs .ant-tabs-content-holder {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #deae66;
+  border-radius: 5px;
+} */

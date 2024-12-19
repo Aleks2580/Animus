@@ -4,7 +4,27 @@ import { useProducts } from "../../constants/ProductsConstants";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 import { IoBodyOutline } from "react-icons/io5";
 import { RiFocus3Line } from "react-icons/ri";
+import { Tabs } from 'antd';
 import styles from "./ProductPage.module.css";
+
+const { TabPane } = Tabs;
+// const items = [
+//   {
+//     key: 'description',
+//     label: 'Description',
+//     children: 'Content of Tab Pane 1gfgnfdkjgjfhdgkfdnbgjkfdnbkfdnbfdkmbnfdjk.gbfkdbndfkmbknfd.bmfdkbfjng.fjnfdk.gnkfdkmnvfdm,bn.fdgkmbfdn.gflngkbfdng.kjfhgfjdkgnfdmg',
+//   },
+//   {
+//     key: 'dosage',
+//     label: 'Dosage',
+//     children: 'Content of Tab Pane 2',
+//   },
+//   {
+//     key: 'research',
+//     label: 'Research',
+//     children: 'Content of Tab Pane 3',
+//   },
+// ];
 
 export default function ProductPage() {
   const { productId } = useParams();
@@ -14,6 +34,10 @@ export default function ProductPage() {
   if (!product) {
     return <div className={styles.error}>Product not found!</div>;
   }
+
+  const onChange = (key) => {
+    console.log(key);
+  };
 
   return (
     <div className={styles.productPage}>
@@ -72,15 +96,34 @@ export default function ProductPage() {
       </section>
 
       {/* Tabs */}
-      <section className={styles.tabs}>
+      {/* <section className={styles.tabs}>
+      <Tabs className={styles.tabButton} defaultActiveKey="1" items={items} onChange={onChange} />
         <button className={styles.tabButton}>Description</button>
         <button className={styles.tabButton}>Dosage</button>
         <button className={styles.tabButton}>Research</button>
         <button className={styles.tabButton}>Reviews</button>
+      </section> */}
+      <section className={styles.tabs}>
+        <Tabs
+          defaultActiveKey="description"
+          onChange={onChange}
+          className={styles.customTabs}
+          // tabBarStyle={'color: white'}
+        >
+          <TabPane className={styles.productInfo} tab="Description" key="description">
+            Content of Tab Pane 1: Description goes here.fggfiogjfodigjdfgijdfglkfdjgdfigjfgkjdfg;ofdisgjfdiogj;iofdjgh;iodfhjgfdioghj;dfiogjfhiojfdshgfjdhgfdjhg;ofdishifodhgjdfs;oigjfdhfdgfgfghdfghfdg,fdhgjfdhgjfghfjghjfgfhgfhgfldghfjgkfdgljhfdglhjdfsgfgfghfdgfdgjfkdgfglhfadgjshfdlgfjkdsglhjfdsh,gfdgfdgfdgfgfdgsffdgfdgfghsfdh
+          </TabPane>
+          <TabPane tab="Dosage" key="dosage">
+            Content of Tab Pane 2: Dosage details go here.
+          </TabPane>
+          <TabPane tab="Research" key="research">
+            Content of Tab Pane 3: Research information goes here.
+          </TabPane>
+        </Tabs>
       </section>
 
       {/* Product Description */}
-      <section className={styles.productInfo}>
+      {/* <section className={styles.productInfo}>
         <h2>Buy {product.name} Online</h2>
         <p>
         Piracetam is a nootropic supplement that is used to improve cognitive function. It is a derivative of gamma-amino-butyric acid (GABA) with an effect on the central nervous system (CNS). Piracetam is also used in the complex therapy of medical conditions with brain function impairment.
@@ -114,7 +157,7 @@ Also check out Piracetam combination nootropics:
 
 
         </p>
-      </section>
+      </section> */}
     </div>
   );
 }
