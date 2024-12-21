@@ -1,0 +1,25 @@
+.mainDiv {
+    padding: 10vh 10% 0 10%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #1d1d1d;
+  }
+  
+:global(.ant-collapse-header-text) {
+    color: #ffffff;
+}
+
+:global(.ant-collapse-arrow) {
+    color: #deae66 !important;
+}
+
+  .panel {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 920px) {
+    .mainDiv {
+      min-height: 82vh;
+    }
+  }
