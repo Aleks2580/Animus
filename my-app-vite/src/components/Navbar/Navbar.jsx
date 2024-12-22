@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link className={styles.link} to='/products'>{t('navbar.products')}</Link>
           <Link className={styles.link} to='/about'>{t('navbar.about')}</Link>
           <Link className={styles.link} to='/order'>{t('navbar.how_to_order')}</Link>
-          <Link className={styles.link} to='/blog'>{t('navbar.blog')}</Link>
+          <Link className={styles.link} to='/blogs'>{t('navbar.blog')}</Link>
           <Link className={styles.link} to='/faq'>{t('navbar.faq')}</Link>
         </nav>
       </div>

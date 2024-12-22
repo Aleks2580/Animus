@@ -12,6 +12,7 @@ import Products from "./components/Products/Products";
 import ContactIcons from "./components/ContactIcons/ContactIcons";
 import ProductPage from "./components/Products/ProductPage";
 import Faq from "./components/Faq/Faq";
+import Blog from "./components/Blog/Blog";
 
 function Layout() {
   return (
@@ -57,6 +58,7 @@ function App() {
           />
           <Route path="products" element={<Products />} />
           <Route path="products/:productId" element={<ProductPage />} />
+          <Route path="blogs" element={<Blog />} />
           <Route path="faq" element={<Faq />} />
         </Route>
       </Routes>

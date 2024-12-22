@@ -59,9 +59,9 @@ export default function ProductPage() {
 
           <div className={styles.cartSection}>
             <div className={styles.quantityWrapper}>
-              <button>-</button>
+              <button className={styles.addToCart}>-</button>
               <span>1</span>
-              <button>+</button>
+              <button className={styles.addToCart}>+</button>
             </div>
             <button className={styles.addToCart}>Add to Cart</button>
           </div>

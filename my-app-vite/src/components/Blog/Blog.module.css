@@ -1,0 +1,113 @@
+.blogSection {
+    min-height: 100vh;
+    overflow-y: auto; 
+    background-color: black;;
+    padding: 10vh 10% 0 10%; 
+  }
+  
+  .sectionTitle {
+    color: #deae66;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+/*   
+  @media only screen and (max-width: 1200px) {
+    .gridContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+  
+    .gridContainer {
+      grid-template-columns: 1fr;
+    }
+  } */
+  
+
+  .card {
+    width: 300px;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    border-color: #deae66; 
+    box-shadow: 0 6px 15px rgba(222, 174, 102, 0.3);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Title */
+  .cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+  }
+  
+  /* Excerpt */
+  .cardExcerpt {
+    font-size: 14px;
+    color: #cccccc; /* Slightly lighter text */
+    flex-grow: 1;   /* Let the excerpt expand if needed */
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* Date */
+  .cardDate {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+  }
+  
+
+  .learnMoreBtn {
+    color: #1d1d1d;          
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+
+    letter-spacing: 1px;
+  }
+  
+  .learnMoreBtn:hover {
+    background-color: #e6bb70; 
+  }
+  

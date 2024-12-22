@@ -45,5 +45,17 @@
       "name": "Alpha GPC",
       "description": "Enhance memory and support brain health."
     }
-  }
+  },
+    "posts": {
+      "title1": "Title 1",
+      "title2": "Title 2",
+      "title3": "Title 3",
+      "title4": "Title 4",
+      "title5": "Title 5",
+      "title6": "Title 6",
+      "title7": "Title 7",
+      "title8": "Title 8",
+      "title9": "Title 9",
+      "title10": "Title 10"
+    }
 }
