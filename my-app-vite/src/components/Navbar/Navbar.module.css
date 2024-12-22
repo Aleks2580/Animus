@@ -1,34 +1,87 @@
 .container {
-   position: fixed;
-   width: 100vw;
-   background-color: #000000;
-   height: 10vh;
-   z-index: 50;
-   top: 0;
-}
-
-.wrapper {
+    position: fixed;
+    width: 100vw;
+    background-color: #000000; /* Black background */
+    height: 10vh;
+    z-index: 50;
+    top: 0;
+    left: 0;
+  }
+  
+  .wrapper {
     margin: 0px 100px 0 100px;
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-}
-
-.logo {
+  }
+  
+  /* Logo styling */
+  .logo {
     width: 200px;
     height: 60px;
-}
-
-.navbar {
-   
-    display: flex;
-    justify-content: space-between;
-    width: 40vw;
-}
-
-.link {
-    color: #ffffff;
-    text-decoration: none;
-}
+  }
+  
+  /* Assigned to <Menu> via className. Remove default border, match background. */
+  .navbar {
+    background-color: black !important;
+    border: none !important;
+  }
+  
+  /* Remove default horizontal border */
+  :global(.ant-menu-horizontal) {
+    border-bottom: none !important;
+    background-color: black !important;
+  }
+  
+  /* Default menu item style */
+  :global(.ant-menu-horizontal > .ant-menu-item) {
+    border-bottom: none !important;
+    margin: 0 10px;
+  }
+  
+  /* Hover effect for menu items */
+  :global(.ant-menu-horizontal > .ant-menu-item:hover) {
+    background-color: #222222;
+  }
+  
+  /* 
+    OVERRIDE the default SELECTED item underline color.
+    We do NOT add a second border; we simply replace the default
+    blue with gold for the existing underline.
+  */
+  :global(.ant-menu-horizontal > .ant-menu-item::after),
+  :global(.ant-menu-horizontal > .ant-menu-submenu::after) {
+    border-bottom: 2px solid transparent; 
+    transition: border-color 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* 
+    For the SELECTED or HOVER state, override to gold
+  */
+  :global(.ant-menu-horizontal > .ant-menu-item-selected::after),
+  :global(.ant-menu-horizontal > .ant-menu-item-active::after),
+  :global(.ant-menu-horizontal > .ant-menu-submenu-selected::after),
+  :global(.ant-menu-horizontal > .ant-menu-submenu-active::after) {
+    border-bottom-color: #deae66 !important; /* GOLD underline */
+  }
+  
+  /* Link styling: white text, gold on hover/active */
+  .link {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: #deae66 !important;
+  }
+  
