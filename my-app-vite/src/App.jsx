@@ -13,6 +13,7 @@ import ContactIcons from "./components/ContactIcons/ContactIcons";
 import ProductPage from "./components/Products/ProductPage";
 import Faq from "./components/Faq/Faq";
 import Blog from "./components/Blog/Blog";
+import About from "./components/About/About";
 
 function Layout() {
   return (
@@ -58,6 +59,7 @@ function App() {
           />
           <Route path="products" element={<Products />} />
           <Route path="products/:productId" element={<ProductPage />} />
+          <Route path="about" element={<About />} />
           <Route path="blogs" element={<Blog />} />
           <Route path="faq" element={<Faq />} />
         </Route>

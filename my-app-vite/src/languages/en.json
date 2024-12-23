@@ -57,5 +57,31 @@
       "title8": "Title 8",
       "title9": "Title 9",
       "title10": "Title 10"
+    },
+    "about": {
+    "title": "Who We Are",
+    "description": "At Project V, we believe in unlocking the full potential of your mind. Specializing in sourcing the most innovative nootropic solutions, we bridge the gap between you and cutting-edge cognitive enhancers. We don't sell – we empower you by connecting you to trusted products and providers.",
+    "features": {
+      "unlock": {
+        "title": "Unlock Your Mind",
+        "description": "Empower your brain with nootropics that support memory, focus, and clarity."
+      },
+      "customer": {
+        "title": "Customer-Centric",
+        "description": "We focus on sourcing trusted products tailored to your needs."
+      },
+      "science": {
+        "title": "Science-Backed",
+        "description": "All products are rooted in research for safe and effective enhancement."
+      },
+      "delivery": {
+        "title": "Global Reach",
+        "description": "Seamless ordering and delivery tailored for your convenience worldwide."
+      },
+      "trust": {
+        "title": "Trusted Providers",
+        "description": "Your privacy and trust are at the core of everything we do."
+      }
     }
+  }
 }
