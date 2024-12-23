@@ -2,7 +2,6 @@
     padding: 10vh 50px 0; /* Top padding for navbar, horizontal padding for spacing */
     text-align: center;
     color: #fff; /* White text for sleek contrast */
-    /* background-color: #000; */
     height: 90vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
