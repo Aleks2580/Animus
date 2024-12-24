@@ -1,14 +1,15 @@
-.howToOrder {
-    padding: 10vh 50px 50px 50px; /* Top padding in pixels */
-    background-color: #1d1d1d; /* Match the style */
+ .howToOrder {
+    padding: 10vh 50px 0 50px; 
+    background-color: #1d1d1d;
     color: #fff;
+    height: 90vh;
   }
   
   .title {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     color: #deae66;
   }
   
@@ -18,23 +19,59 @@
     font-size: 16px;
     color: #ccc;
   }
-  
-  .orderForm {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+  .steps {
+    width: 60%; /* Limit maximum width */
+    margin: 20px auto; /* Center horizontally */   
   }
   
+  :global(.ant-steps-item-title) {
+    color: #deae66; /* Gold color for titles */
+  }
+  
+  :global(.ant-steps-item-description) {
+    color: #ccc; /* Light gray for descriptions */
+  }
+  
+  :global(.ant-steps-item-process .ant-steps-item-title),
+  :global(.ant-steps-item-process .ant-steps-item-description) {
+    color: #fff !important; /* Active step styling */
+  }
+  
+  :global(.ant-steps-item-finish .ant-steps-item-title),
+  :global(.ant-steps-item-finish .ant-steps-item-description) {
+    color: #deae66 !important; /* Finished step styling */
+  }
+  
+  :global(.ant-steps-item-wait .ant-steps-item-title),
+  :global(.ant-steps-item-wait .ant-steps-item-description) {
+    color: #ccc !important; /* Waiting step styling */
+  }
+
+
+  .orderForm {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+  }
+  
+  .formGroupWrapper {
+    width: 400px;
+  }
+
   .formGroup {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    
   }
   
   label {
     font-size: 16px;
+    margin-top: 10px;
     color: #deae66;
   }
   
@@ -60,6 +97,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 10px;
   }
   
   .productItem {
@@ -112,3 +150,5 @@
     background-color: #f5c770;
   }
   
+
+   
