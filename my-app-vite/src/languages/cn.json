@@ -98,5 +98,37 @@
         "description": "隐私和信任是我们一切工作的核心。"
       }
     }
+  },
+  "countries": {
+    "unitedStates": "美国",
+    "china": "中国",
+    "unitedKingdom": "英国",
+    "india": "印度",
+    "germany": "德国",
+    "france": "法国",
+    "japan": "日本",
+    "russia": "俄罗斯",
+    "italy": "意大利",
+    "australia": "澳大利亚",
+    "brazil": "巴西",
+    "southKorea": "韩国",
+    "spain": "西班牙",
+    "netherlands": "荷兰",
+    "canada": "加拿大",
+    "southAfrica": "南非",
+    "turkey": "土耳其",
+    "malaysia": "马来西亚",
+    "philippines": "菲律宾",
+    "switzerland": "瑞士",
+    "belgium": "比利时",
+    "singapore": "新加坡",
+    "mexico": "墨西哥",
+    "sweden": "瑞典",
+    "norway": "挪威",
+    "indonesia": "印度尼西亚",
+    "czechRepublic": "捷克共和国",
+    "poland": "波兰",
+    "hungary": "匈牙利",
+    "newZealand": "新西兰"
   }
 }

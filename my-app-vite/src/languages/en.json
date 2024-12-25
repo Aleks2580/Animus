@@ -103,5 +103,37 @@
         "description": "Your privacy and trust are at the core of everything we do."
       }
     }
+  },
+  "countries": {
+    "unitedStates": "United States",
+    "china": "China",
+    "unitedKingdom": "United Kingdom",
+    "india": "India",
+    "germany": "Germany",
+    "france": "France",
+    "japan": "Japan",
+    "russia": "Russia",
+    "italy": "Italy",
+    "australia": "Australia",
+    "brazil": "Brazil",
+    "southKorea": "South Korea",
+    "spain": "Spain",
+    "netherlands": "Netherlands",
+    "canada": "Canada",
+    "southAfrica": "South Africa",
+    "turkey": "Turkey",
+    "malaysia": "Malaysia",
+    "philippines": "Philippines",
+    "switzerland": "Switzerland",
+    "belgium": "Belgium",
+    "singapore": "Singapore",
+    "mexico": "Mexico",
+    "sweden": "Sweden",
+    "norway": "Norway",
+    "indonesia": "Indonesia",
+    "czechRepublic": "Czech Republic",
+    "poland": "Poland",
+    "hungary": "Hungary",
+    "newZealand": "New Zealand"
   }
 }
