@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, createContext, useContext } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import i18n from "i18next";
+import { BulbOutlined } from "@ant-design/icons";
 import HeroSection from "./components/HeroSection/Hero";
 import SubHero from "./components/SubHero/SubHero";
-import "./App.css";
-import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import { FloatButton } from "antd";
 import Footer from "./components/Footer/Footer";
@@ -14,7 +13,12 @@ import ProductPage from "./components/Products/ProductPage";
 import Faq from "./components/Faq/Faq";
 import Blog from "./components/Blog/Blog";
 import About from "./components/About/About";
-import HowToOrder from "./components/HowToOrder/HowToOrder"
+import HowToOrder from "./components/HowToOrder/HowToOrder";
+import "./App.css";
+import styles from "./App.module.css";
+
+// Create a context for theme
+export const ThemeContext = createContext();
 
 function Layout() {
   return (
@@ -22,7 +26,7 @@ function Layout() {
       <Navbar />
       <Outlet />
       <Footer />
-      <ContactIcons/>
+      <ContactIcons />
     </>
   );
 }
@@ -30,6 +34,9 @@ function Layout() {
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(
     localStorage.getItem("language") || "CN"
+  );
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light"
   );
 
   const handleLanguage = () => {
@@ -39,35 +46,58 @@ function App() {
     i18n.changeLanguage(newLanguage); // Change i18next language
   };
 
-  return (
-    <>
-      <span className={styles.language} onClick={handleLanguage}>
-        {selectedLanguage === "EN" ? "中文" : "EN"}
-      </span>
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.body.setAttribute("data-theme", newTheme); // Optional: Apply theme to body
+  };
 
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={
-              <>
-                <HeroSection />
-                <div id="subhero">
-                  <SubHero />
-                </div>
-              </>
-            }
+  return (
+    <ThemeContext.Provider value={theme}>
+      <div className={styles.app}>
+        <div className={styles.switches}>
+          {/* Theme Toggle Icon */}
+          <BulbOutlined
+            style={{
+              fontSize: "16px",
+              color: theme === "light" ? "#345764" : "#fff",
+              cursor: "pointer",
+            }}
+            onClick={toggleTheme}
           />
-          <Route path="products" element={<Products />} />
-          <Route path="products/:productId" element={<ProductPage />} />
-          <Route path="about" element={<About />} />
-          <Route path="order" element={<HowToOrder />} />
-          <Route path="blogs" element={<Blog />} />
-          <Route path="faq" element={<Faq />} />
-        </Route>
-      </Routes>
-      <FloatButton.BackTop className={styles.floatButton} />
-    </>
+
+          {/* Language Switch */}
+          <span className={styles.language} onClick={handleLanguage}>
+            {selectedLanguage === "EN" ? "中文" : "EN"}
+          </span>
+        </div>
+
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route
+              index
+              element={
+                <>
+                  <HeroSection />
+                  <div id="subhero">
+                    <SubHero />
+                  </div>
+                </>
+              }
+            />
+            <Route path="products" element={<Products />} />
+            <Route path="products/:productId" element={<ProductPage />} />
+            <Route path="about" element={<About />} />
+            <Route path="order" element={<HowToOrder />} />
+            <Route path="blogs" element={<Blog />} />
+            <Route path="faq" element={<Faq />} />
+          </Route>
+        </Routes>
+
+        <FloatButton.BackTop className={styles.floatButton} />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
