@@ -1,7 +1,7 @@
-.container {
+/* .container {
     position: fixed;
     width: 100vw;
-    background-color: #000000; /* Black background */
+    background-color: #000000; 
     height: 10vh;
     z-index: 50;
     top: 0;
@@ -17,40 +17,36 @@
     height: 10vh;
   }
   
-  /* Logo styling */
+
   .logo {
     width: 200px;
     height: 60px;
   }
   
-  /* Assigned to <Menu> via className. Remove default border, match background. */
+
   .navbar {
     background-color: black !important;
     border: none !important;
   }
   
-  /* Remove default horizontal border */
+ 
   :global(.ant-menu-horizontal) {
     border-bottom: none !important;
     background-color: black !important;
   }
   
-  /* Default menu item style */
+
   :global(.ant-menu-horizontal > .ant-menu-item) {
     border-bottom: none !important;
     margin: 0 10px;
   }
   
-  /* Hover effect for menu items */
+
   :global(.ant-menu-horizontal > .ant-menu-item:hover) {
     background-color: #222222;
   }
   
-  /* 
-    OVERRIDE the default SELECTED item underline color.
-    We do NOT add a second border; we simply replace the default
-    blue with gold for the existing underline.
-  */
+
   :global(.ant-menu-horizontal > .ant-menu-item::after),
   :global(.ant-menu-horizontal > .ant-menu-submenu::after) {
     border-bottom: 2px solid transparent; 
@@ -61,18 +57,15 @@
     right: 0;
     bottom: 0;
   }
-  
-  /* 
-    For the SELECTED or HOVER state, override to gold
-  */
+ 
   :global(.ant-menu-horizontal > .ant-menu-item-selected::after),
   :global(.ant-menu-horizontal > .ant-menu-item-active::after),
   :global(.ant-menu-horizontal > .ant-menu-submenu-selected::after),
   :global(.ant-menu-horizontal > .ant-menu-submenu-active::after) {
-    border-bottom-color: #deae66 !important; /* GOLD underline */
+    border-bottom-color: #deae66 !important; 
   }
   
-  /* Link styling: white text, gold on hover/active */
+
   .link {
     color: #ffffff !important;
     text-decoration: none !important;
@@ -84,4 +77,65 @@
   .link:hover {
     color: #deae66 !important;
   }
+   */
+   .container {
+    position: fixed;
+    width: 100vw;
+    background-color: var(--navbar-background);
+    height: 10vh;
+    z-index: 50;
+    top: 0;
+    left: 0;
+  }
   
+  .wrapper {
+    margin: 0px 100px 0 100px;
+    background-color: var(--navbar-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 60px;
+    filter: var(--logo-filter);
+  }
+  
+  .navbar {
+    background-color: var(--navbar-background) !important;
+    border: none !important;
+  }
+  
+  .link {
+    color: var(--link-color) !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: var(--link-hover-color) !important;
+  }
+  
+  :global(.ant-menu-horizontal > .ant-menu-item) {
+    border-bottom: none !important;
+    margin: 0 10px;
+  }
+  
+  :global(.ant-menu-horizontal > .ant-menu-item:hover) {
+    background-color: var(--menu-item-hover);
+  }
+  
+  :global(.ant-menu-horizontal > .ant-menu-item-selected::after) {
+    border-bottom-color: var(--menu-item-selected) !important;
+  }
+  
+  :global(.ant-menu-horizontal > .ant-menu-item-selected::after),
+  :global(.ant-menu-horizontal > .ant-menu-item-active::after),
+  :global(.ant-menu-horizontal > .ant-menu-submenu-selected::after),
+  :global(.ant-menu-horizontal > .ant-menu-submenu-active::after) {
+    border-bottom-color: var(--menu-item-selected) !important; 
+  }

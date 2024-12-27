@@ -1,0 +1,33 @@
+/* theme.css */
+:root {
+
+    /*NAVBAR*/
+    --background-color: #fafafa;
+    --text-color: #000000;
+    --link-color: #345764;
+    --link-hover-color: #deae66;
+    --navbar-background: #ffffff;
+    --menu-item-hover: #f2f2f2;
+    --menu-item-selected: #deae66;
+    --logo-filter: invert(1);
+
+    /*HERO*/
+
+
+  }
+  
+  [data-theme="dark"] {
+
+    /*NAVBAR*/
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --link-color: #ffffff;
+    --link-hover-color: #deae66;
+    --navbar-background: #000000;
+    --menu-item-hover: #222222;
+    --menu-item-selected: #deae66;
+    --logo-filter: none;
+
+    /*HERO*/
+  }
+  

@@ -13,10 +13,8 @@
   }
   
   .language {
-    /* color: #a8a7a7; */
-    color: #fff;
+    color: var(--text-color);
     font-size: 11px;
-    /* font-weight: bold; */
     cursor: pointer;
   }
   

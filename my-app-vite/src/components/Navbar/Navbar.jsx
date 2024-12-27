@@ -52,8 +52,7 @@ export default function Navbar() {
     },
   ];
 
-  // If the current path is one of the item keys, highlight it
-  // Otherwise, highlight nothing
+  
   const isValidPath = items.some((item) => item.key === location.pathname);
   const selectedKeys = isValidPath ? [location.pathname] : [];
 
@@ -62,6 +61,7 @@ export default function Navbar() {
       <div className={styles.wrapper}>
         <Link to="/">
           <img className={styles.logo} src="../logo.png" alt="Logo" />
+          {/* <span>PROJECT <h1>V</h1> </span> */}
         </Link>
         <Menu
           selectedKeys={selectedKeys}

@@ -1,4 +1,5 @@
-import React, { useState, createContext, useContext } from "react";
+import "./theme.css";
+import React, { useState, createContext, useEffect, useContext } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import i18n from "i18next";
 import { BulbOutlined } from "@ant-design/icons";
@@ -14,8 +15,9 @@ import Faq from "./components/Faq/Faq";
 import Blog from "./components/Blog/Blog";
 import About from "./components/About/About";
 import HowToOrder from "./components/HowToOrder/HowToOrder";
-import "./App.css";
 import styles from "./App.module.css";
+
+
 
 // Create a context for theme
 export const ThemeContext = createContext();
@@ -36,8 +38,12 @@ function App() {
     localStorage.getItem("language") || "CN"
   );
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "light"
+    localStorage.getItem("theme") || "dark"
   );
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
 
   const handleLanguage = () => {
     const newLanguage = selectedLanguage === "EN" ? "CN" : "EN"; // Toggle between EN and CN
@@ -61,7 +67,7 @@ function App() {
           <BulbOutlined
             style={{
               fontSize: "16px",
-              color: theme === "light" ? "#345764" : "#fff",
+              color: theme === "light" ? "#000000" : "#fff",
               cursor: "pointer",
             }}
             onClick={toggleTheme}

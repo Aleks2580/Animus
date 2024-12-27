@@ -6,9 +6,9 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    color: #fff;
+    /* color: #fff; */
     overflow: hidden; 
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--background-color);
     /* z-index: 1;  */
 }
 
@@ -45,12 +45,13 @@
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #deae66;
+    /* color: #7466de; */
     
 }
 
 .heroContent p {
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 /* Styles for the outer container */
@@ -79,7 +80,7 @@
     width: 10px;
     height: 30px;
     border-radius: 20px; /* Equivalent to rounded-3xl */
-    border: 1px solid white; /* Adjust color as needed */
+    border: 1px solid var(--text-color); /* Adjust color as needed */
     display: flex;
     justify-content: center;
     align-items: start;
@@ -93,7 +94,7 @@
     height: 6px; /* Equivalent to h-3 */
     border-radius: 50%; /* Equivalent to rounded-full */
     margin-bottom: 4px; /* Equivalent to mb-1 */
-    background-color: white; /* Adjust color as needed */
+    background-color: var(--text-color); /* Adjust color as needed */
   }
   
 
