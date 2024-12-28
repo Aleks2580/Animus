@@ -44,8 +44,7 @@
 .heroContent h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #deae66;
-    /* color: #7466de; */
+    color: var(--hero-text-color);
     
 }
 

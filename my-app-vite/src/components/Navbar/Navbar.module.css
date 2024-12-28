@@ -96,12 +96,36 @@
     align-items: center;
     height: 10vh;
   }
+
+  .navLink {
+    text-decoration: none;
+  }
+
+  .navLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--link-color)
+  }
+
+  .logoV {
+   font-size: 38px;
+   margin-left: 5px;
+   font-weight: bold;
+  }
+
+  .logoProject {
+    font-size: 28px;
+    letter-spacing: 4px;
+    /* font-weight: bold; */
+  }
   
-  .logo {
+  
+  /* .logo {
     width: 200px;
     height: 60px;
     filter: var(--logo-filter);
-  }
+  } */
   
   .navbar {
     background-color: var(--navbar-background) !important;

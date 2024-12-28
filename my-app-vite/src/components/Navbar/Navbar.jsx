@@ -59,9 +59,13 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Link to="/">
-          <img className={styles.logo} src="../logo.png" alt="Logo" />
-          {/* <span>PROJECT <h1>V</h1> </span> */}
+        <Link className={styles.navLink} to="/">
+          {/* <img className={styles.logo} src="../logo.png" alt="Logo" /> */}
+          <div className={styles.navLogo}>
+          <span className={styles.logoProject}>PROJECT</span>
+          <span className={styles.logoV}>V</span>
+          </div>
+          
         </Link>
         <Menu
           selectedKeys={selectedKeys}

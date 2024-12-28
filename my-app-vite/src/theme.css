@@ -12,6 +12,9 @@
     --logo-filter: invert(1);
 
     /*HERO*/
+    --hero-text-color: #7466de;
+  
+
 
 
   }
@@ -29,5 +32,6 @@
     --logo-filter: none;
 
     /*HERO*/
+    --hero-text-color: #deae66;
   }
   
