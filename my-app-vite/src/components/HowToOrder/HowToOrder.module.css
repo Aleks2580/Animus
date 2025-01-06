@@ -1,4 +1,4 @@
- .howToOrder {
+ /* .howToOrder {
     padding: 10vh 50px 0 50px; 
     background-color: #1d1d1d;
     color: #fff;
@@ -21,36 +21,35 @@
   }
 
   .steps {
-    width: 60%; /* Limit maximum width */
-    margin: 20px auto; /* Center horizontally */   
+    width: 60%; 
+    margin: 20px auto;  
   }
   
   :global(.ant-steps-item-title) {
-    color: #deae66; /* Gold color for titles */
+    color: #deae66; 
   }
   
   :global(.ant-steps-item-description) {
-    color: #ccc; /* Light gray for descriptions */
+    color: #ccc; 
   }
   
   :global(.ant-steps-item-process .ant-steps-item-title),
   :global(.ant-steps-item-process .ant-steps-item-description) {
-    color: #fff !important; /* Active step styling */
+    color: #fff !important; 
   }
   
   :global(.ant-steps-item-finish .ant-steps-item-title),
   :global(.ant-steps-item-finish .ant-steps-item-description) {
-    color: #deae66 !important; /* Finished step styling */
+    color: #deae66 !important; 
   }
   
   :global(.ant-steps-item-wait .ant-steps-item-title),
   :global(.ant-steps-item-wait .ant-steps-item-description) {
-    color: #ccc !important; /* Waiting step styling */
+    color: #ccc !important; 
   }
 
 
   .orderForm {
-    /* max-width: 600px; */
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -172,5 +171,178 @@
     border: 1px solid #ccc;
     background-color: #2a2a2a;
     color: #fff;
+  }
+   */
+
+   .howToOrder {
+    padding: 10vh 50px 0 50px; 
+    background-color: var(--order-background-color);
+    color: var(--order-text-color);
+    height: 90vh;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    color: var(--order-title-color);
+  }
+  
+  .disclaimer {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: var(--order-text-color);
+  }
+  
+  .steps {
+    width: 60%; 
+    margin: 20px auto;  
+  }
+  
+  :global(.ant-steps-item-title) {
+    color: var(--order-steps-title-color); 
+  }
+  
+  :global(.ant-steps-item-description) {
+    color: var(--order-steps-description-color); 
+  }
+  
+  :global(.ant-steps-item-process .ant-steps-item-title),
+  :global(.ant-steps-item-process .ant-steps-item-description) {
+    color: var(--order-steps-current-title-color) !important; 
+  }
+  
+  :global(.ant-steps-item-finish .ant-steps-item-title),
+  :global(.ant-steps-item-finish .ant-steps-item-description) {
+    color: var(--order-steps-finish-title-color) !important; 
+  }
+  
+  :global(.ant-steps-item-wait .ant-steps-item-title),
+  :global(.ant-steps-item-wait .ant-steps-item-description) {
+    color: var(--order-steps-wait-title-color) !important; 
+  }
+  
+  .orderForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+  }
+  
+  .formGroupWrapper {
+    width: 400px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--order-label-color);
+  }
+  
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--order-input-border-color);
+    font-size: 14px;
+    background-color: var(--order-input-background);
+    color: var(--order-input-text-color);
+    outline: none;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--order-input-focus-color);
+  }
+  
+  .productSelection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .productItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .productImage {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid var(--order-product-border-color);
+    border-radius: 5px;
+  }
+  
+  .productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+  }
+  
+  .productPrice {
+    font-size: 14px;
+    color: var(--order-product-price-color);
+  }
+  
+  .totalPrice {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    color: var(--order-total-price-color);
+    font-weight: bold;
+  }
+  
+  .submitButton {
+    padding: 15px 20px;
+    background-color: var(--order-button-background);
+    color: var(--order-button-text-color);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .submitButton:hover {
+    background-color: var(--order-button-hover-background);
+  }
+  
+  .phoneWrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .phoneCode {
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--order-input-border-color);
+    background-color: var(--order-input-background);
+    color: var(--order-input-text-color);
+  }
+  
+  .phoneInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--order-input-border-color);
+    background-color: var(--order-input-background);
+    color: var(--order-input-text-color);
   }
   

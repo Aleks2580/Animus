@@ -16,6 +16,7 @@ import Blog from "./components/Blog/Blog";
 import About from "./components/About/About";
 import HowToOrder from "./components/HowToOrder/HowToOrder";
 import styles from "./App.module.css";
+import BlogPage from "./components/Blog/BlogPage";
 
 
 
@@ -97,6 +98,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="order" element={<HowToOrder />} />
             <Route path="blogs" element={<Blog />} />
+            <Route path="blogs/:blogId" element={<BlogPage />} />
             <Route path="faq" element={<Faq />} />
           </Route>
         </Routes>

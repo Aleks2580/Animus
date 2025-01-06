@@ -1,4 +1,4 @@
-/* Faq.module.css */
+/* 
 .mainDiv {
   padding: 10vh 10% 0 10%;
   min-height: 90vh;
@@ -8,43 +8,90 @@
   background-color: #1d1d1d;
 }
 
-/* Keep the arrow color the same */
+
 :global(.ant-collapse-arrow) {
   color: #deae66 !important;
 }
 
-/* Slightly soften the header text color so it’s not super bright white */
+
 :global(.ant-collapse-header-text) {
   color: #f0f0f0;
 }
 
-/* Give the Collapse a slightly lighter background to reduce contrast */
+
 :global(.ant-collapse) {
   background-color: #2a2a2a;
-  border: none; /* Hide default border if you prefer a sleeker look */
+  border: none; 
 }
 
-/* Each collapse item can have subtle separators if you like */
+
 :global(.ant-collapse-item) {
   border-bottom: 1px solid #3a3a3a;
 }
 
-/* Soften the panel header background */
+
 :global(.ant-collapse-header) {
   background-color: #2a2a2a !important;
 }
 
-/* Content area also matches the lighter background */
+
 :global(.ant-collapse-content) {
   background-color: #2a2a2a;
 }
 
-/* Panel text styling */
+
 .panel {
   font-size: 16px;
   color: #f0f0f0;
   line-height: 1.5;
-  padding: 10px 0; /* Optional extra spacing for readability */
+  padding: 10px 0; 
+}
+
+@media only screen and (max-width: 920px) {
+  .mainDiv {
+    min-height: 82vh;
+  }
+} */
+.mainDiv {
+  padding: 10vh 10% 0 10%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--faq-background-color);
+}
+
+:global(.ant-collapse-arrow) {
+  color: var(--faq-collapse-arrow-color) !important;
+}
+
+:global(.ant-collapse-header-text) {
+  color: var(--faq-panel-header-color);
+}
+
+:global(.ant-collapse) {
+  background-color: var(--faq-panel-background-color);
+  border: none; 
+}
+
+:global(.ant-collapse-item) {
+  border-bottom: 1px solid var(--faq-panel-border-color);
+}
+
+:global(.ant-collapse-header) {
+  background-color: var(--faq-panel-background-color) !important;
+}
+
+:global(.ant-collapse-content) {
+  background-color: var(--faq-panel-background-color);
+  color: var(--faq-panel-content-color);
+}
+
+.panel {
+  font-size: 16px;
+  color: var(--faq-panel-content-color);
+  line-height: 1.5;
+  padding: 10px 0; 
 }
 
 @media only screen and (max-width: 920px) {
