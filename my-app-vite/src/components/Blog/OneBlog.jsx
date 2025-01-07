@@ -3,7 +3,8 @@ import styles from './OneBlog.module.css'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
 
-export default function OneBlog({id, image, title, date, excerpt}) {
+export default function OneBlog({id, image, title, date, intro}) {
+  const truncatedIntro = intro?.slice(0, 120) + "..."
   return (
     <Link to={`/blogs/${id}`} className={styles.link}>
           <motion.div
@@ -21,10 +22,10 @@ export default function OneBlog({id, image, title, date, excerpt}) {
               className={styles.cardImage}
             />
             <h3 className={styles.cardTitle}>
-              {title || "Sample Title"}
+              {title || "Title"}
             </h3>
             <p className={styles.cardExcerpt}>
-              {excerpt || "Lorem gfhor sit amet..."}
+              {truncatedIntro}
             </p>
             <p className={styles.cardDate}>
               {date || "December 20, 2024"}

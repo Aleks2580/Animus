@@ -1,15 +1,19 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useProducts } from "../../constants/ProductsConstants";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 import { IoBodyOutline } from "react-icons/io5";
 import { RiFocus3Line } from "react-icons/ri";
-import { Tabs } from "antd";
+import { Tabs, Button } from "antd";
+import { IoIosArrowRoundBack } from "react-icons/io"
 import styles from "./ProductPage.module.css";
+import { useTranslation } from "react-i18next";
+
 
 const { TabPane } = Tabs;
 
 export default function ProductPage() {
+  const { t } = useTranslation();
   const { productId } = useParams();
   const products = useProducts();
   const product = products.find((p) => p.id === productId);
@@ -20,11 +24,16 @@ export default function ProductPage() {
 
   return (
     <div className={styles.productPage}>
+       <Link to='/products'>
+       <Button className={styles.backButton} type="primary" icon={<IoIosArrowRoundBack className={styles.backButtonIcon} />} iconPosition='start'>
+       {t("productPage.backButton")}
+        </Button>
+      </Link>
       {/* Product Section */}
       <section className={styles.productSection}>
         <div className={styles.imageWrapper}>
           <img src={product.image} alt={product.name} className={styles.image} />
-          <div className={styles.features}>
+          {/* <div className={styles.features}>
             <div className={styles.iconBox}>
               <MdOutlineEnergySavingsLeaf className={styles.icon} />
               <p>AUTHENTIC PRODUCTS</p>
@@ -37,7 +46,7 @@ export default function ProductPage() {
               <RiFocus3Line className={styles.icon} />
               <p>15% CRYPTO DISCOUNT</p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.productDetails}>
@@ -46,7 +55,7 @@ export default function ProductPage() {
 
           <div className={styles.priceSection}>
             <span className={styles.price}>{product.price}</span>
-            <span className={styles.inStock}>In stock</span>
+            <span className={styles.inStock}>{t("productPage.inStock")}</span>
           </div>
 
           <div className={styles.cartSection}>
@@ -55,17 +64,14 @@ export default function ProductPage() {
               <span>1</span>
               <button className={styles.addToCart}>+</button>
             </div>
-            <button className={styles.addToCart}>Add to Cart</button>
+            <button className={styles.addToCart}>{t("productPage.addToCart")}</button>
           </div>
 
           <div className={styles.disclaimer}>
             <p>
-              All statements on this page are for informational purposes only
-              and have not been evaluated. This product is not intended to
-              diagnose, treat, cure, or prevent any disease. Before using this
-              product, consulting a qualified MD is mandatory.{" "}
+            {t("productPage.disclaimer")} {" "}
               <a href="#more" className={styles.moreLink}>
-                See more.
+              {t("productPage.seeMore")}
               </a>
             </p>
           </div>
@@ -75,19 +81,19 @@ export default function ProductPage() {
       {/* Tabs Section */}
       <section className={styles.tabs}>
         <Tabs defaultActiveKey="description">
-          <TabPane className={styles.productInfo} tab="Description" key="description">
+          <TabPane className={styles.productInfo} tab={t("productPage.tabs.description")} key="description">
             <div
               className={styles.productText}
               dangerouslySetInnerHTML={{ __html: product.description }} // Render HTML safely
             />
           </TabPane>
-          <TabPane className={styles.productInfo} tab="Dosage" key="dosage">
+          <TabPane className={styles.productInfo} tab={t("productPage.tabs.dosage")} key="dosage">
             <div
               className={styles.productText}
               dangerouslySetInnerHTML={{ __html: product.dosage }} // Render HTML safely
             />
           </TabPane>
-          <TabPane className={styles.productInfo} tab="Research" key="research">
+          <TabPane className={styles.productInfo} tab={t("productPage.tabs.research")} key="research">
             <div
               className={styles.productText}
               dangerouslySetInnerHTML={{ __html: product.research }} // Render HTML safely

@@ -21,8 +21,8 @@
     --subhero-icon:  #345764;
     --subhero-gradient: linear-gradient(
       to right bottom,
-      rgba(255, 255, 255, 0.995),
-      rgba(255, 255, 255, 0.816)
+      rgba(255, 255, 255, 0.846),
+      rgba(255, 255, 255, 0.02)
   );
 
     /*PRODUCTS*/
@@ -107,7 +107,22 @@
   --blog-learnmore-btn-background: #7466de;
   --blog-learnmore-btn-text-color: #ffffff;
   --blog-learnmore-btn-hover-background: #8a84da;
+
+
+    /*ONE BLOG*/
+    --blog-background-color: #fafafa;
+  --blog-text-color: #000000;
+  --blog-title-color: #1a73e8;
+  --blog-date-color: #555555;
+  --blog-heading-color: #333333;
+  --blockquote-background: #f9f9f9;
+  --blockquote-border-color: #1a73e8;
+  --blockquote-text-color: #555555;
+  --error-text-color: #ff0000;
   }
+ 
+
+
 
   
   [data-theme="dark"] {
@@ -215,5 +230,16 @@
    --blog-learnmore-btn-background: #deae66;
    --blog-learnmore-btn-text-color: #1d1d1d;
    --blog-learnmore-btn-hover-background: #e6bb70;
+
+   /*ONE BLOG*/
+   --blog-background-color: #1d1d1d;
+  --blog-text-color: #f0f0f0;
+  --blog-title-color: #deae66;
+  --blog-date-color: #aaaaaa;
+  --blog-heading-color: #ffffff;
+  --blockquote-background: #2a2a2a;
+  --blockquote-border-color: #deae66;
+  --blockquote-text-color: #cccccc;
+  --error-text-color: #ff6666;
   }
   
