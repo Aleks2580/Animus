@@ -171,5 +171,48 @@
     "addToCart": "Add to Cart",
     "disclaimer": "All statements on this page are for informational purposes only and have not been evaluated. This product is not intended to diagnose, treat, cure, or prevent any disease. Before using this product, consulting a qualified MD is mandatory.",
     "seeMore": "See more."
+  },
+  "blog": {
+    "learn_more": "Learn more"
+  },
+  "how_to_order": {
+    "title": "How To Order",
+    "disclaimer": "The payment system is under development. For now, simply fill out the form, and we will get back to you shortly!",
+    "steps": {
+      "step1_title": "Step 1",
+      "step1_description": "Fill in your personal information",
+      "step2_title": "Step 2",
+      "step2_description": "Choose your products",
+      "step3_title": "Step 3",
+      "step3_description": "Submit your order"
+    },
+    "form": {
+      "name_label": "Name:",
+      "email_label": "Email:",
+      "country_label": "Country:",
+      "phone_label": "Phone:",
+      "phone_code_placeholder": "Code",
+      "phone_number_placeholder": "Your Phone Number",
+      "post_code_label": "Post Code:",
+      "city_label": "City:",
+      "street_label": "Street:",
+      "name_placeholder": "Your Name",
+      "email_placeholder": "Your Email",
+      "post_code_placeholder": "Your Post Code",
+      "city_placeholder": "Your City",
+      "street_placeholder": "Your Street",
+      "country_placeholder": "Select Country"
+    },
+    "product": {
+      "quantity_placeholder": "Quantity",
+      "total_price": "Total:"
+    },
+    "buttons": {
+      "submit": "Submit Order"
+    },
+    "messages": {
+      "success": "Thank you! We will get back to you shortly.",
+      "error": "Please select at least one product to order."
+    }
   }
 }

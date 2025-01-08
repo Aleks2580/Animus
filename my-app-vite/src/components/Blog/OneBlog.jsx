@@ -2,8 +2,11 @@ import React from 'react'
 import styles from './OneBlog.module.css'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 
 export default function OneBlog({id, image, title, date, intro}) {
+  const { t } = useTranslation();
   const truncatedIntro = intro?.slice(0, 120) + "..."
   return (
     <Link to={`/blogs/${id}`} className={styles.link}>
@@ -30,7 +33,7 @@ export default function OneBlog({id, image, title, date, intro}) {
             <p className={styles.cardDate}>
               {date || "December 20, 2024"}
             </p>
-            <button className={styles.learnMoreBtn}>Learn more</button>
+            <button className={styles.learnMoreBtn}>{t("blog.learn_more")}</button>
           </motion.div>
       
       

@@ -3,8 +3,10 @@ import { useProducts } from "../../constants/ProductsConstants";
 import { useCountries } from "../../constants/useCountries";
 import { Steps, message } from "antd";
 import styles from "./HowToOrder.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function HowToOrder() {
+  const { t } = useTranslation();
   const products = useProducts();
   const countries = useCountries();
 
@@ -29,14 +31,14 @@ export default function HowToOrder() {
   const success = () => {
     messageApi.open({
       type: "success",
-      content: "Thank you! We will get back to you shortly.",
+      content: t("how_to_order.messages.success"),
     });
   };
 
   const error = () => {
     messageApi.open({
       type: "error",
-      content: "Please select at least one product to order.",
+      content: t("how_to_order.messages.error"),
     });
   };
 
@@ -67,7 +69,6 @@ export default function HowToOrder() {
       error();
       return;
     }
-    console.log("Order submitted:", { ...formData, items: selectedItems });
     success();
   };
 
@@ -102,10 +103,9 @@ export default function HowToOrder() {
   return (
     <div className={styles.howToOrder}>
       {contextHolder}
-      <h1 className={styles.title}>How To Order</h1>
+      <h1 className={styles.title}>{t("how_to_order.title")}</h1>
       <p className={styles.disclaimer}>
-        The payment system is under development. For now, simply fill out the
-        form, and we will get back to you shortly!
+      {t("how_to_order.disclaimer")}
       </p>
       <div className={styles.stepsWrapper}>
         <Steps
@@ -113,17 +113,17 @@ export default function HowToOrder() {
           current={current}
           items={[
             {
-              title: "Step 1",
-              description: "Fill in your personal information",
+              title: t("how_to_order.steps.step1_title"),
+              description: t("how_to_order.steps.step1_description")
             },
             {
-              title: "Step 2",
-              description: "Choose your products",
+              title: t("how_to_order.steps.step2_title"),
+              description: t("how_to_order.steps.step2_description")
             },
             {
-              title: "Step 3",
-              description: "Submit your order",
-            },
+              title: t("how_to_order.steps.step3_title"),
+              description: t("how_to_order.steps.step3_description")
+            }
           ]}
         />
       </div>
@@ -131,35 +131,35 @@ export default function HowToOrder() {
         <div className={styles.formGroupWrapper}>
           {/* Name Field */}
           <div className={styles.formGroup}>
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name">{t("how_to_order.form.name_label")}</label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Your Name"
+              placeholder={t("how_to_order.form.name_placeholder")}
               required
             />
           </div>
 
           {/* Email Field */}
           <div className={styles.formGroup}>
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">{t("how_to_order.form.email_label")}</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Your Email"
+              placeholder={t("how_to_order.form.email_label")}
               required
             />
           </div>
 
           {/* Country Dropdown */}
           <div className={styles.formGroup}>
-            <label htmlFor="country">Country:</label>
+            <label htmlFor="country">{t("how_to_order.form.country_label")}</label>
             <select
               id="country"
               name="country"
@@ -167,7 +167,7 @@ export default function HowToOrder() {
               onChange={handleChange}
               required
             >
-              <option value="">Select Country</option>
+              <option value="">{t("how_to_order.form.country_placeholder")}</option>
               {countries.map((country) => (
                 <option key={country.code} value={country.name}>
                   {country.name}
@@ -178,7 +178,7 @@ export default function HowToOrder() {
 
           {/* Phone Field */}
           <div className={styles.formGroup}>
-            <label htmlFor="phone">Phone:</label>
+            <label htmlFor="phone">{t("how_to_order.form.phone_label")}</label>
             <div className={styles.phoneWrapper}>
               <select
                 name="code"
@@ -187,7 +187,7 @@ export default function HowToOrder() {
                 className={styles.phoneCode}
                 required
               >
-                <option value="">Code</option>
+                <option value="">{t("how_to_order.form.phone_code_placeholder")}</option>
                 {countries.map((country) => (
                   <option key={country.code} value={country.code}>
                     {country.code} ({country.name})
@@ -199,7 +199,7 @@ export default function HowToOrder() {
                 name="number"
                 value={formData.phone.number}
                 onChange={handlePhoneChange}
-                placeholder="Your Phone Number"
+                placeholder={t("how_to_order.form.phone_number_placeholder")}
                 className={styles.phoneInput}
                 required
               />
@@ -208,38 +208,38 @@ export default function HowToOrder() {
 
           {/* Address Fields */}
           <div className={styles.formGroup}>
-            <label htmlFor="postCode">Post Code:</label>
+            <label htmlFor="postCode">{t("how_to_order.form.post_code_label")}</label>
             <input
               type="text"
               id="postCode"
               name="postCode"
               value={formData.postCode}
               onChange={handleChange}
-              placeholder="Your Post Code"
+              placeholder={t("how_to_order.form.post_code_placeholder")}
               required
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="city">City:</label>
+            <label htmlFor="city">{t("how_to_order.form.city_label")}</label>
             <input
               type="text"
               id="city"
               name="city"
               value={formData.city}
               onChange={handleChange}
-              placeholder="Your City"
+              placeholder={t("how_to_order.form.city_placeholder")}
               required
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="street">Street:</label>
+            <label htmlFor="street">{t("how_to_order.form.street_label")}</label>
             <input
               type="text"
               id="street"
               name="street"
               value={formData.street}
               onChange={handleChange}
-              placeholder="Your Street"
+              placeholder={t("how_to_order.form.street_placeholder")}
               required
             />
           </div>
@@ -267,7 +267,7 @@ export default function HowToOrder() {
                   onChange={(e) =>
                     handleQuantityChange(product.id, e.target.value)
                   }
-                  placeholder="Quantity"
+                  placeholder={t("how_to_order.product.quantity_placeholder")}
                 />
               </div>
             </div>
@@ -277,12 +277,12 @@ export default function HowToOrder() {
         {/* Total Price */}
         <div>
           <div className={styles.totalPrice}>
-            <h3>Total: ${calculateTotal()}</h3>
+            <h3>{t("how_to_order.product.total_price")} ${calculateTotal()}</h3>
           </div>
 
           {/* Submit Button */}
           <button type="submit" className={styles.submitButton}>
-            Submit Order
+          {t("how_to_order.buttons.submit")}
           </button>
         </div>
       </form>

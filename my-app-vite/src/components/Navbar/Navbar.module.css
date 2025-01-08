@@ -1,83 +1,3 @@
-/* .container {
-    position: fixed;
-    width: 100vw;
-    background-color: #000000; 
-    height: 10vh;
-    z-index: 50;
-    top: 0;
-    left: 0;
-  }
-  
-  .wrapper {
-    margin: 0px 100px 0 100px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-  }
-  
-
-  .logo {
-    width: 200px;
-    height: 60px;
-  }
-  
-
-  .navbar {
-    background-color: black !important;
-    border: none !important;
-  }
-  
- 
-  :global(.ant-menu-horizontal) {
-    border-bottom: none !important;
-    background-color: black !important;
-  }
-  
-
-  :global(.ant-menu-horizontal > .ant-menu-item) {
-    border-bottom: none !important;
-    margin: 0 10px;
-  }
-  
-
-  :global(.ant-menu-horizontal > .ant-menu-item:hover) {
-    background-color: #222222;
-  }
-  
-
-  :global(.ant-menu-horizontal > .ant-menu-item::after),
-  :global(.ant-menu-horizontal > .ant-menu-submenu::after) {
-    border-bottom: 2px solid transparent; 
-    transition: border-color 0.3s;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
- 
-  :global(.ant-menu-horizontal > .ant-menu-item-selected::after),
-  :global(.ant-menu-horizontal > .ant-menu-item-active::after),
-  :global(.ant-menu-horizontal > .ant-menu-submenu-selected::after),
-  :global(.ant-menu-horizontal > .ant-menu-submenu-active::after) {
-    border-bottom-color: #deae66 !important; 
-  }
-  
-
-  .link {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  .link:hover {
-    color: #deae66 !important;
-  }
-   */
    .container {
     position: fixed;
     width: 100vw;
@@ -163,3 +83,102 @@
   :global(.ant-menu-horizontal > .ant-menu-submenu-active::after) {
     border-bottom-color: var(--menu-item-selected) !important; 
   }
+
+  /* Mobile menu styles */
+.mobileMenu {
+  position: absolute;
+  top: 10vh; /* Below the navbar */
+  right: 0;
+  /* width: 100%; */
+  background-color: var(--navbar-background);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenuItem {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuItem a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mobileMenuItem a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Highlight active link in the mobile menu */
+/* Highlight active link in the mobile menu */
+.mobileMenuItem.active a {
+  font-weight: 900;
+  color: var(--menu-item-selected); /* Use the active color for mobile */
+  text-decoration: none;
+}
+
+/* Fix dot appearance */
+.mobileMenu ul {
+  list-style: none; /* Remove dots */
+  padding: 0;
+  margin: 0;
+}
+
+/* Add transition for smooth hover effect */
+.mobileMenuItem a {
+  transition: color 0.3s ease;
+}
+
+/* Hamburger icon for small screens */
+.menuToggle {
+  display: none; /* Default hidden */
+}
+
+.hidden {
+  display: none; /* Utility to hide elements */
+}
+
+
+  /* Adjust the margin and padding for smaller screens */
+@media (max-width: 1200px) {
+  .wrapper {
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Hide the desktop menu */
+  }
+
+  .menuToggle {
+    display: block; /* Show hamburger icon */
+    cursor: pointer;
+    color: var(--link-color);
+  }
+}
+
+@media (max-width: 480px) {
+  .logoV {
+    font-size: 28px;
+  }
+
+  .logoProject {
+    font-size: 20px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
