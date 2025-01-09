@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProducts } from "../../constants/ProductsConstants";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
@@ -21,7 +21,7 @@ export default function ProductPage() {
   if (!product) {
     return <div className={styles.error}>Product not found!</div>;
   }
-
+  
   return (
     <div className={styles.productPage}>
        <Link to='/products'>

@@ -17,6 +17,7 @@ import About from "./components/About/About";
 import HowToOrder from "./components/HowToOrder/HowToOrder";
 import styles from "./App.module.css";
 import BlogPage from "./components/Blog/BlogPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -79,7 +80,7 @@ function App() {
             {selectedLanguage === "EN" ? "中文" : "EN"}
           </span>
         </div>
-
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route

@@ -208,3 +208,29 @@
 :global(.ant-tabs-ink-bar.ant-tabs-ink-bar-animated) {
   background-color: var(--oneproduct-tabs-active-color) !important;
 }
+
+
+
+@media (max-width: 850px) {
+  .image {
+    max-width: 70%; 
+  }
+}
+
+@media (max-width: 700px) {
+  .backButton {
+    left: 10px;
+    margin-top: 10px;
+ }
+
+ .productSection {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.image {
+  max-width: 50%; 
+}
+}
