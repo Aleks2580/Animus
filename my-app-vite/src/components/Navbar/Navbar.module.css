@@ -41,12 +41,6 @@
   }
   
   
-  /* .logo {
-    width: 200px;
-    height: 60px;
-    filter: var(--logo-filter);
-  } */
-  
   .navbar {
     background-color: var(--navbar-background) !important;
     border: none !important;
@@ -119,7 +113,7 @@
   color: var(--link-hover-color);
 }
 
-/* Highlight active link in the mobile menu */
+
 /* Highlight active link in the mobile menu */
 .mobileMenuItem.active a {
   font-weight: 900;

@@ -8,11 +8,19 @@
 .footer {
     color: #a8a7a7;
     text-align: center;
-    /* padding: 10px 20px; */
-    position: fixed; /* Ensures it's fixed in place */
-    bottom: 0; /* Fixes it to the bottom of the viewport */
+    position: fixed; 
+    bottom: 0; 
     left: 0;
-    z-index: 100; /* Keeps it above other elements */
+    z-index: 100;
     font-size: 11px;
     margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+ .footer {
+    font-size: 9px;
+    width: 65vw;
+    text-align: left;
+ }
 }
