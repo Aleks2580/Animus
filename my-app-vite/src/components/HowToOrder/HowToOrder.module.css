@@ -170,3 +170,21 @@
     color: var(--order-input-text-color);
   }
   
+  @media (max-width: 1000px) {
+    .steps {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .orderForm {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .formGroupWrapper {
+      width: 300px;
+    }
+  }
