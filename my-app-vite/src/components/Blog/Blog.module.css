@@ -2,18 +2,19 @@
     min-height: 100vh;
     overflow-y: auto; 
     background-color: var(--products-background);
-    padding: 10vh 10% 0 10%; 
+    padding: 10vh 10% 50px 10%; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  .flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin-bottom: 20px;
   }
  
   

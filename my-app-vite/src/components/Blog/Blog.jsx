@@ -11,7 +11,7 @@ export default function Blog() {
     <section className={styles.blogSection}>
       
        <h2 className={styles.sectionTitle}>BLOG</h2>
-       <div className={styles.gridContainer}>
+       <div className={styles.flexContainer}>
        {posts?.map((post, index) => (
       <OneBlog key={index} {...post} />
     ))}
