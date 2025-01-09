@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   background-color: var(--faq-background-color);
+  margin-top: 10px;
 }
 
 :global(.ant-collapse-arrow) {
@@ -37,18 +38,13 @@
   font-size: 16px;
   color: var(--faq-panel-content-color);
   line-height: 1.5;
-  padding: 10px 0; 
+  padding: 7px 0; 
 }
 
 
 @media (max-width: 768px) {
- .mainDiv {
-  margin-top: 10px;
- }
-
  .panel {
   font-size: 14px;
-  line-height: 1.5;
   padding: 5px 0; 
 }
 }
