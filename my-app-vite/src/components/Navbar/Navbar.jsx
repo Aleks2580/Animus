@@ -3,18 +3,55 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu } from "antd";
 import { FiMenu, FiX } from "react-icons/fi"; // React Icons
 import styles from "./Navbar.module.css";
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const items = [
-    { key: "/products", label: "Products" },
-    { key: "/about", label: "About" },
-    { key: "/order", label: "How to Order" },
-    { key: "/blogs", label: "Blog" },
-    { key: "/faq", label: "FAQ" },
+    {
+      key: '/products',
+      label: (
+        <Link className={styles.link} to="/products">
+          {t('navbar.products')}
+        </Link>
+      ),
+    },
+    {
+      key: '/about',
+      label: (
+        <Link className={styles.link} to="/about">
+          {t('navbar.about')}
+        </Link>
+      ),
+    },
+    {
+      key: '/order',
+      label: (
+        <Link className={styles.link} to="/order">
+          {t('navbar.how_to_order')}
+        </Link>
+      ),
+    },
+    {
+      key: '/blogs',
+      label: (
+        <Link className={styles.link} to="/blogs">
+          {t('navbar.blog')}
+        </Link>
+      ),
+    },
+    {
+      key: '/faq',
+      label: (
+        <Link className={styles.link} to="/faq">
+          {t('navbar.faq')}
+        </Link>
+      ),
+    },
   ];
 
   const selectedKeys = items.some((item) => item.key === location.pathname)

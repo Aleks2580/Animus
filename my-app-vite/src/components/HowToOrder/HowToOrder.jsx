@@ -22,7 +22,7 @@ export default function HowToOrder() {
       id: product.id,
       name: product.name,
       price: parseFloat(product.price.replace("$", "")),
-      quantity: null,
+      quantity: " ",
     })),
   });
 
@@ -168,8 +168,8 @@ export default function HowToOrder() {
               required
             >
               <option value="">{t("how_to_order.form.country_placeholder")}</option>
-              {countries.map((country) => (
-                <option key={country.code} value={country.name}>
+              {countries.map((country, index) => (
+                <option key={index} value={country.name}>
                   {country.name}
                 </option>
               ))}
@@ -188,8 +188,8 @@ export default function HowToOrder() {
                 required
               >
                 <option value="">{t("how_to_order.form.phone_code_placeholder")}</option>
-                {countries.map((country) => (
-                  <option key={country.code} value={country.code}>
+                {countries.map((country, index) => (
+                  <option key={index} value={country.code}>
                     {country.code} ({country.name})
                   </option>
                 ))}
