@@ -1,0 +1,238 @@
+ .productPage {
+  padding: 10vh 10% 0 10%;
+  background-color: var(--oneproduct-background-color); 
+  color: var(--oneproduct-text-color);
+  min-height: 90vh; 
+  scroll-behavior: smooth;
+}
+
+.backButton {
+  position: fixed;
+  left: 80px;
+  margin-top: 30px;
+  background-color: #345764;
+  box-shadow: none;
+}
+
+.backButton:hover {
+  background-color: rgb(53, 53, 53) !important;
+}
+
+.backButtonIcon {
+  font-size: 20px;
+}
+
+.productSection {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 30px;
+}
+
+.imageWrapper {
+  flex: 1;
+  max-width: 500px; 
+  height: 500px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.productDetails {
+  flex: 1;
+  max-width: 500px; 
+  height: 500px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.image {
+  max-width: 60%; 
+  object-fit: contain; 
+  border-radius: 10px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.iconBox {
+  text-align: center;
+  flex: 0 1 calc(33.333% - 20px);
+}
+
+.iconBox p {
+  font-size: 12px;
+}
+
+.icon {
+  font-size: 24px;
+  color: var(--oneproduct-icon-color);
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--oneproduct-name-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subname {
+  color: var(--oneproduct-subname-color);
+  text-align: center;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.priceSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.price {
+  font-size: 24px;
+  color: var(--oneproduct-price-color);
+}
+
+.inStock {
+  font-size: 16px;
+  color: var(--oneproduct-instock-color);
+}
+
+.cartSection {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.quantityWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addToCart {
+  padding: 10px 20px;
+  background-color: var(--oneproduct-button-background);
+  border: none;
+  color: var(--oneproduct-button-text-color);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.disclaimer {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--oneproduct-disclaimer-color);
+}
+
+.moreLink {
+  color: var(--oneproduct-morelink-color);
+  text-decoration: none;
+}
+
+.tabs {
+  max-width: 1000px; 
+  margin: 40px auto 0; 
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  word-break: break-word; 
+  border-radius: 10px;
+  color: var(--oneproduct-tabs-text-color);
+}
+
+.productInfo {
+  padding: 20px;
+  background-color: var(--oneproduct-tabs-background);
+  border-radius: 10px;
+  color: var(--oneproduct-tabs-text-color);
+  line-height: 1.6;
+  font-size: 16px; 
+  font-weight: 400;
+  text-align: justify;
+  min-height: 1000px; /* Ensure consistent height */
+
+}
+
+.productText h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--oneproduct-price-color);
+}
+
+.productText p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--oneproduct-tabs-text-color);
+}
+
+.productText ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.productText li {
+  font-size: 16px;
+  color: var(--oneproduct-tabs-text-color);
+}
+
+:global(.ant-tabs-tab) {
+  color: var(--oneproduct-tabs-text-color) !important;
+}
+
+:global(.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+  color: var(--oneproduct-tabs-active-color) !important;
+}
+
+:global(.ant-tabs-ink-bar.ant-tabs-ink-bar-animated) {
+  background-color: var(--oneproduct-tabs-active-color) !important;
+}
+
+
+
+@media (max-width: 850px) {
+  .image {
+    max-width: 70%; 
+  }
+}
+
+@media (max-width: 700px) {
+  .backButton {
+    left: 10px;
+    margin-top: 10px;
+ }
+
+ .productSection {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.image {
+  max-width: 50%; 
+}
+}

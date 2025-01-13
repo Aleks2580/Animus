@@ -1,0 +1,219 @@
+{
+  "hero": {
+    "title": "释放你的潜能",
+    "description": "用清晰、专注和无限的创造力赋予你的大脑力量。"
+  },
+  "navbar": {
+    "products": "产品",
+    "about": "关于我们",
+    "how_to_order": "如何订购",
+    "blog": "博客",
+    "faq": "常见问题"
+  },
+  "footer": {
+    "content": "这仅是信息内容。请在做出任何与健康相关的决定之前咨询您的医生。"
+  },
+  "subhero": {
+    "title": "激发大脑潜能，提升生命质量",
+    "subtitle": "欢迎来到 Project V，这里是提升记忆力、专注力和大脑健康的创新之选。解锁你的认知潜力，重新定义你的思维能力。",
+    "icons": {
+      "memory": "记忆",
+      "focus": "专注",
+      "calm": "平静",
+      "energy": "能量",
+      "wellness": "健康"
+    }
+  },
+  "products": {
+    "phenotropil": {
+      "name": "Phenotropil",
+       "subname": "提升专注力与能量的认知增强剂",
+      "description": "<h3>什么是芬特罗匹尔？</h3><p>芬特罗匹尔是一种强效脑力增强剂，用于提升专注力、记忆力和精力。最初为俄罗斯宇航员开发，现在被广泛用于认知增强。</p><h3>主要益处</h3><ul><li>改善心理清晰度和专注力。</li><li>增强对压力和疲劳的抵抗力。</li><li>提升整体认知表现。</li></ul>",
+      "price": "¥240.00",
+      "dosage": "<h3>推荐剂量</h3><p>每天早晨餐后服用100毫克。密集使用前请咨询医生以获得精确剂量建议。</p><h3>禁忌症</h3><ul><li>不适用于儿童、孕妇或哺乳期女性。</li><li>避免下午3点后使用，以免失眠。</li></ul>",
+      "research": "<h3>科学研究</h3><ul><li><b>1983:</b> Bobkov等的研究表明认知功能得到改善。</li><li><b>2010:</b> Koval’chuk等的研究显示其对中风康复的疗效。</li></ul><p>访问<a href='https://pubmed.ncbi.nlm.nih.gov/21626817/' target='_blank'>PubMed</a>了解更多研究。</p>"
+    },
+    "semax": {
+      "name": "Semax",
+       "subname": "提升记忆力与脑部健康的神经肽",
+      "description": "<h3>什么是赛美斯？</h3><p>赛美斯是一种合成的神经肽，用于改善记忆并保护大脑免受损害。它因其认知增强和神经保护特性而被广泛研究。</p><h3>主要益处</h3><ul><li>促进记忆和学习能力。</li><li>保护大脑免受退行性病变。</li><li>增强心理清晰度和警觉性。</li></ul>",
+      "price": "¥350.00",
+      "dosage": "<h3>推荐剂量</h3><p>每个鼻孔滴2-3滴，每天两次。通常使用周期为10-14天。长期使用前请咨询医生。</p><h3>禁忌症</h3><ul><li>对肽类物质过敏者禁用。</li><li>未经医疗建议，孕期或哺乳期避免使用。</li></ul>",
+      "research": "<h3>科学研究</h3><ul><li><b>2002:</b> Ashmarin等研究表明其在中风后的认知恢复中具有重要作用。</li><li><b>2015:</b> 在缺血条件下的神经保护研究显示其疗效 (PubMed ID: 25615853)。</li></ul>"
+    },
+    "irs19": {
+      "name": "IRS-19",
+      "subname": "支持免疫系统，助您更健康",
+      "description": "<h3>什么是IRS-19？</h3><p>IRS-19是一种增强免疫力的鼻喷剂，用于加强身体对呼吸道感染的防御能力。</p><h3>主要益处</h3><ul><li>增强免疫反应。</li><li>减少呼吸道感染。</li><li>加快感冒和流感的恢复。</li></ul>",
+      "price": "¥175.00",
+      "dosage": "<h3>推荐剂量</h3><p>每个鼻孔喷一次，每天两次。至少持续使用7-10天，或遵循医疗建议。</p><h3>禁忌症</h3><ul><li>对鼻部敏感者慎用。</li><li>儿童（2岁以下）使用前需在医疗监督下进行。</li></ul>",
+      "research": "<h3>科学研究</h3><ul><li><b>2001:</b> 临床试验显示其在减少儿童急性呼吸道感染中的疗效。</li><li><b>2017:</b> 研究证实了其在成人中增强免疫调节的作用 (PubMed ID: 28514217)。</li></ul>"
+    },
+    "noopept": {
+      "name": "Noopept",
+      "subname": "增强认知并保护您的大脑",
+      "description": "<h3>什么是诺普特？</h3><p>诺普特是一种强效脑力增强剂，以其记忆增强和神经保护特性而闻名。它被广泛用于提升脑功能。</p><h3>主要益处</h3><ul><li>改善记忆保留能力。</li><li>增强专注力和注意力。</li><li>支持整体脑健康。</li></ul>",
+      "price": "¥200.00",
+      "dosage": "<h3>推荐剂量</h3><p>每天两次，每次10毫克。避免单日超过30毫克的剂量。建议仅短期使用（最长4周）。</p><h3>禁忌症</h3><ul><li>不推荐18岁以下人群使用。</li><li>孕期或哺乳期避免使用。</li></ul>",
+      "research": "<h3>科学研究</h3><ul><li><b>2009:</b> 研究表明诺普特在氧化应激情况下具有神经保护特性 (PubMed ID: 19298799)。</li><li><b>2015:</b> 临床试验证实了其记忆增强效果 (PubMed ID: 25821775)。</li></ul>"
+    },
+    "alpha_gpc": {
+      "name": "Alpha GPC",
+      "subname": "增强记忆力并支持脑健康",
+      "description": "<h3>什么是Alpha GPC？</h3><p>Alpha GPC是一种天然胆碱化合物，可支持记忆、学习和整体脑健康。</p><h3>主要益处</h3><ul><li>改善记忆力和认知功能。</li><li>支持脑细胞修复。</li><li>提高身体表现。</li></ul>",
+      "price": "¥275.00",
+      "dosage": "<h3>推荐剂量</h3><p>每天服用300毫克，最好随餐服用。为增强效果，剂量可增加至600毫克。</p><h3>禁忌症</h3><ul><li>对胆碱化合物敏感者避免使用。</li><li>孕期或哺乳期使用前请咨询医生。</li></ul>",
+      "research": "<h3>科学研究</h3><ul><li><b>2010:</b> 研究确认其在改善老年患者记忆和学习能力方面的作用 (PubMed ID: 20655659)。</li><li><b>2016:</b> Alpha GPC显示可提高运动员的身体表现 (PubMed ID: 26818747)。</li></ul>"
+    }
+  },
+  "posts": {
+    "title1": "标题 1",
+    "title2": "标题 2",
+    "title3": "标题 3",
+    "title4": "标题 4",
+    "title5": "标题 5",
+    "title6": "标题 6",
+    "title7": "标题 7",
+    "title8": "标题 8",
+    "title9": "标题 9",
+    "title10": "标题 10"
+  },
+  "about": {
+    "title": "我们是谁",
+    "description": "在 Project V，我们相信每个人都可以释放大脑的全部潜能。我们专注于提供创新的脑力提升解决方案，搭建您与顶尖认知增强产品之间的桥梁。我们不直接销售——我们通过连接值得信赖的产品和供应商来赋能您。",
+    "features": {
+      "unlock": {
+        "title": "释放您的潜力",
+        "description": "通过支持记忆、专注和清晰思维的脑力增强剂提升您的大脑功能。"
+      },
+      "customer": {
+        "title": "以客户为中心",
+        "description": "我们专注于为您的需求提供值得信赖的产品。"
+      },
+      "science": {
+        "title": "科学验证",
+        "description": "所有产品都基于研究，确保安全和有效的增强效果。"
+      },
+      "delivery": {
+        "title": "全球覆盖",
+        "description": "便捷的订购和配送服务，为您量身打造。"
+      },
+      "trust": {
+        "title": "值得信赖",
+        "description": "隐私和信任是我们一切工作的核心。"
+      }
+    }
+  },
+  "countries": {
+    "unitedStates": "美国",
+    "china": "中国",
+    "unitedKingdom": "英国",
+    "india": "印度",
+    "germany": "德国",
+    "france": "法国",
+    "japan": "日本",
+    "russia": "俄罗斯",
+    "italy": "意大利",
+    "australia": "澳大利亚",
+    "brazil": "巴西",
+    "southKorea": "韩国",
+    "spain": "西班牙",
+    "netherlands": "荷兰",
+    "canada": "加拿大",
+    "southAfrica": "南非",
+    "turkey": "土耳其",
+    "malaysia": "马来西亚",
+    "philippines": "菲律宾",
+    "switzerland": "瑞士",
+    "belgium": "比利时",
+    "singapore": "新加坡",
+    "mexico": "墨西哥",
+    "sweden": "瑞典",
+    "norway": "挪威",
+    "indonesia": "印度尼西亚",
+    "czechRepublic": "捷克共和国",
+    "poland": "波兰",
+    "hungary": "匈牙利",
+    "newZealand": "新西兰"
+  },
+  "faqs": {
+    "one": "什么是 Project V？",
+    "two": "你们是否直接销售产品？",
+    "three": "如何下订单？",
+    "four": "你们的公司位于哪里？",
+    "five": "运费是多少？",
+    "six": "配送需要多长时间？",
+    "seven": "你们是否可以运送到任何国家？",
+    "eight": "你们的产品是否安全和真实？",
+    "nine": "下订单是否需要处方？",
+    "ten": "如何联系你们以了解更多信息？"
+  },
+  "answers": {
+    "one": "Project V 是一家总部位于俄罗斯的物流服务公司。我们专注于帮助客户订购他们所在国家可能无法获得的药品和认知增强产品。所有购买仅供个人使用。",
+    "two": "不，我们不直接销售产品。我们根据您的个人订单代表您从可信赖的供应商处寻找并购买产品。",
+    "three": "您可以通过访问我们的“如何订购”部分并填写所需表格来下订单，我们将为您提供整个过程的协助。",
+    "four": "我们位于俄罗斯，为个人使用提供国际订单的便利。",
+    "five": "运费取决于目的地。请直接联系我们以获取基于您所在位置的详细报价。",
+    "six": "配送通常需要 1 至 14 天，具体取决于您的位置和选择的运输方式。",
+    "seven": "是的，我们可以安排运送到大多数国家。但是，您有责任检查有关药品进口的当地规定。",
+    "eight": "我们仅从可信赖的供应商处采购产品。然而，在使用任何产品之前，请咨询医疗专业人士。",
+    "nine": "在大多数情况下，不需要处方，但根据您所在国家的法律，有些产品可能需要。请检查您的当地法规。",
+    "ten": "您可以通过电子邮件、Telegram、X（以前的 Twitter）或我们网站上的在线聊天功能联系我们以获得任何其他帮助。"
+  },
+  "productPage": {
+    "backButton": "返回",
+    "tabs": {
+      "description": "描述",
+      "dosage": "用量",
+      "research": "研究"
+    },
+    "inStock": "有库存",
+    "addToCart": "加入购物车",
+    "disclaimer": "此页面上的所有声明仅供信息参考，未经过验证。本产品不用于诊断、治疗、治愈或预防任何疾病。在使用此产品之前，必须咨询合格的医生。",
+    "seeMore": "查看更多。"
+  },
+  "blog": {
+    "learn_more": "了解更多"
+ },
+ "how_to_order": {
+    "title": "如何订购",
+    "disclaimer": "支付系统正在开发中。目前，只需填写表格，我们会尽快与您联系！",
+    "steps": {
+      "step1_title": "步骤 1",
+      "step1_description": "填写您的个人信息",
+      "step2_title": "步骤 2",
+      "step2_description": "选择您的产品",
+      "step3_title": "步骤 3",
+      "step3_description": "提交您的订单"
+    },
+    "form": {
+      "name_label": "姓名：",
+      "email_label": "电子邮箱：",
+      "country_label": "国家：",
+      "phone_label": "电话：",
+      "phone_code_placeholder": "区号",
+      "phone_number_placeholder": "您的电话号码",
+      "post_code_label": "邮政编码：",
+      "city_label": "城市：",
+      "street_label": "街道：",
+      "name_placeholder": "您的姓名",
+      "email_placeholder": "您的电子邮箱",
+      "post_code_placeholder": "您的邮政编码",
+      "city_placeholder": "您的城市",
+      "street_placeholder": "您的街道",
+      "country_placeholder": "选择国家"
+
+    },
+    "product": {
+      "quantity_placeholder": "数量",
+      "total_price": "总计："
+    },
+    "buttons": {
+      "submit": "提交订单"
+    },
+    "messages": {
+      "success": "感谢您！我们会尽快与您联系。",
+      "error": "请至少选择一种产品进行订购。"
+    }
+  }
+}
