@@ -18,7 +18,6 @@ import HowToOrder from "./components/HowToOrder/HowToOrder";
 import styles from "./App.module.css";
 import BlogPage from "./components/Blog/BlogPage";
 import ScrollToTop from "./components/ScrollToTop";
-// import TestSupabase from "./components/TestSupabase";
 
 
 
