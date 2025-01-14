@@ -13,7 +13,7 @@ export default function HowToOrder() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: { code: "", number: "" }, // Combined phone code and number
+    phone: { code: "", number: "" }, 
     country: "",
     street: "",
     city: "",
@@ -75,7 +75,7 @@ export default function HowToOrder() {
   const calculateTotal = () => {
     return formData.items
       .reduce((sum, item) => sum + item.price * item.quantity, 0)
-      .toFixed(2); // Total sum with two decimal places
+      .toFixed(2); 
   };
 
   const current = (() => {
@@ -129,7 +129,7 @@ export default function HowToOrder() {
       </div>
       <form className={styles.orderForm} onSubmit={handleSubmit}>
         <div className={styles.formGroupWrapper}>
-          {/* Name Field */}
+   
           <div className={styles.formGroup}>
             <label htmlFor="name">{t("how_to_order.form.name_label")}</label>
             <input
@@ -143,7 +143,7 @@ export default function HowToOrder() {
             />
           </div>
 
-          {/* Email Field */}
+         
           <div className={styles.formGroup}>
             <label htmlFor="email">{t("how_to_order.form.email_label")}</label>
             <input
@@ -157,7 +157,6 @@ export default function HowToOrder() {
             />
           </div>
 
-          {/* Country Dropdown */}
           <div className={styles.formGroup}>
             <label htmlFor="country">{t("how_to_order.form.country_label")}</label>
             <select
@@ -176,7 +175,6 @@ export default function HowToOrder() {
             </select>
           </div>
 
-          {/* Phone Field */}
           <div className={styles.formGroup}>
             <label htmlFor="phone">{t("how_to_order.form.phone_label")}</label>
             <div className={styles.phoneWrapper}>
@@ -206,7 +204,7 @@ export default function HowToOrder() {
             </div>
           </div>
 
-          {/* Address Fields */}
+        
           <div className={styles.formGroup}>
             <label htmlFor="postCode">{t("how_to_order.form.post_code_label")}</label>
             <input
@@ -245,7 +243,7 @@ export default function HowToOrder() {
           </div>
         </div>
 
-        {/* Product Selection */}
+ 
         <div className={styles.productSelection}>
           {products.map((product) => (
             <div key={product.id} className={styles.productItem}>
@@ -274,13 +272,11 @@ export default function HowToOrder() {
           ))}
         </div>
 
-        {/* Total Price */}
         <div>
           <div className={styles.totalPrice}>
             <h3>{t("how_to_order.product.total_price")} ${calculateTotal()}</h3>
           </div>
 
-          {/* Submit Button */}
           <button type="submit" className={styles.submitButton}>
           {t("how_to_order.buttons.submit")}
           </button>

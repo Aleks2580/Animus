@@ -21,7 +21,7 @@ export default function BlogPost() {
             back
         </Button>
       </Link>
-      {/* Header Section */}
+  
       <div className={styles.headerSection}>
         <img src={post.image} alt={post.title} className={styles.image} />
         <div className={styles.headerContent}>
@@ -31,7 +31,6 @@ export default function BlogPost() {
         </div>
       </div>
 
-      {/* Content */}
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content }}

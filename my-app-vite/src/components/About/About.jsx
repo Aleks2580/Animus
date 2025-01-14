@@ -4,19 +4,19 @@ import { FaBrain, FaHandsHelping, FaLeaf, FaShippingFast, FaLock } from 'react-i
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
-  const { t } = useTranslation(); // Hook to use translations
+  const { t } = useTranslation(); 
 
   return (
     <div className={styles.aboutContainer}>
-      {/* Title */}
+
       <h1 className={styles.title}>{t('about.title')}</h1>
 
-      {/* Description */}
+  
       <p className={styles.description}>
         {t('about.description')}
       </p>
 
-      {/* Features */}
+
       <div className={styles.features}>
         <div className={styles.feature}>
           <FaBrain className={styles.icon} />

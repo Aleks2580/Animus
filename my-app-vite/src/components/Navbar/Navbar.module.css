@@ -23,6 +23,8 @@
 
   .navLogo {
     display: flex;
+    width: 250px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--link-color)
@@ -37,7 +39,14 @@
   .logoProject {
     font-size: 28px;
     letter-spacing: 4px;
-    /* font-weight: bold; */
+
+  }
+  .logoSlogan {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    color: #ffffff8c;
+   
   }
   
   
@@ -78,7 +87,7 @@
     border-bottom-color: var(--menu-item-selected) !important; 
   }
 
-  /* Mobile menu styles */
+  
 .mobileMenu {
   position: absolute;
   top: 7vh; 
@@ -114,36 +123,36 @@
 }
 
 
-/* Highlight active link in the mobile menu */
+
 .mobileMenuItem.active a {
   font-weight: 900;
-  color: var(--menu-item-selected); /* Use the active color for mobile */
+  color: var(--menu-item-selected); 
   text-decoration: none;
 }
 
-/* Fix dot appearance */
+
 .mobileMenu ul {
-  list-style: none; /* Remove dots */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Add transition for smooth hover effect */
+
 .mobileMenuItem a {
   transition: color 0.3s ease;
 }
 
-/* Hamburger icon for small screens */
+
 .menuToggle {
-  display: none; /* Default hidden */
+  display: none; 
 }
 
 .hidden {
-  display: none; /* Utility to hide elements */
+  display: none; 
 }
 
 
-  /* Adjust the margin and padding for smaller screens */
+
 @media (max-width: 1200px) {
   .wrapper {
     margin: 0 50px;
@@ -161,11 +170,11 @@
 
 @media (max-width: 768px) {
   .navbar {
-    display: none; /* Hide the desktop menu */
+    display: none; 
   }
 
   .menuToggle {
-    display: block; /* Show hamburger icon */
+    display: block; 
     cursor: pointer;
     color: var(--link-color);
   }

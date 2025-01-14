@@ -9,7 +9,7 @@ export default function ContactIcons() {
     <div className={styles.container}>
         <FaTelegramPlane className={styles.icon} />
         <MdOutlineAlternateEmail className={styles.icon} />
-        <FaXTwitter className={styles.icon}  />
+        {/* <FaXTwitter className={styles.icon}  /> */}
 
     </div>
   )

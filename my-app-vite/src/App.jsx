@@ -21,7 +21,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 
 
-// Create a context for theme
+
 export const ThemeContext = createContext();
 
 function Layout() {
@@ -48,24 +48,24 @@ function App() {
   }, [theme]);
 
   const handleLanguage = () => {
-    const newLanguage = selectedLanguage === "en-US" ? "zh-CN" : "en-US"; // Toggle between EN and CN
-    localStorage.setItem("language", newLanguage); // Store language preference
-    setSelectedLanguage(newLanguage); // Update state
-    i18n.changeLanguage(newLanguage); // Change i18next language
+    const newLanguage = selectedLanguage === "en-US" ? "zh-CN" : "en-US"; 
+    localStorage.setItem("language", newLanguage);
+    setSelectedLanguage(newLanguage); 
+    i18n.changeLanguage(newLanguage); 
   };
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.body.setAttribute("data-theme", newTheme); // Optional: Apply theme to body
+    document.body.setAttribute("data-theme", newTheme); 
   };
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className={styles.app}>
         <div className={styles.switches}>
-          {/* Theme Toggle Icon */}
+         
           <BulbOutlined
             style={{
               fontSize: "16px",
@@ -75,13 +75,13 @@ function App() {
             onClick={toggleTheme}
           />
 
-          {/* Language Switch */}
+        
           <span className={styles.language} onClick={handleLanguage}>
             {selectedLanguage === "en-US" ? "中文" : "EN"}
           </span>
         </div>
         <ScrollToTop />
-        {/* <TestSupabase /> */}
+   
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route

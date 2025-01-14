@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "antd";
-import { FiMenu, FiX } from "react-icons/fi"; // React Icons
+import { FiMenu, FiX } from "react-icons/fi"; 
 import styles from "./Navbar.module.css";
 import { useTranslation } from 'react-i18next';
 
@@ -79,12 +79,15 @@ export default function Navbar() {
       <div className={styles.wrapper}>
         <Link className={styles.navLink} to="/">
           <div className={styles.navLogo}>
-            <span className={styles.logoProject}>THE</span>
-            <span className={styles.logoV}>NOOTROPIA</span>
+            <span className={styles.logoProject}>SAPIENTROPIC</span>
+            <div className={styles.sloganDiv}>
+            <span className={styles.logoSlogan}>elevate mind</span>
+            <span className={styles.logoSlogan}>expand horizons</span>
+            </div>
           </div>
         </Link>
 
-        {/* Desktop Menu */}
+   
         {!isMobile && (
           <Menu
             selectedKeys={selectedKeys}
@@ -97,14 +100,14 @@ export default function Navbar() {
           />
         )}
 
-        {/* Hamburger Icon */}
+
         {isMobile && (
           <div className={styles.menuToggle} onClick={() => setToggle(!toggle)}>
             {toggle ? <FiX size={28} /> : <FiMenu size={28} />}
           </div>
         )}
 
-        {/* Mobile Menu */}
+
         {isMobile && toggle && (
           <div className={styles.mobileMenu}>
             <ul>

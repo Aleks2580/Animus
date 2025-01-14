@@ -1,8 +1,8 @@
 .container {
     position: fixed;
-    bottom: 0; /* Fixes it to the bottom of the viewport */
+    bottom: 0; 
     right: 0;
-    z-index: 100; /* Keeps it above other elements */
+    z-index: 100;
     margin-right: 20px;
     color: var(--subhero-icon-color);
 }
