@@ -4,16 +4,18 @@ import { useCountries } from "../../constants/useCountries";
 import { Steps, message } from "antd";
 import styles from "./HowToOrder.module.css";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 export default function HowToOrder() {
   const { t } = useTranslation();
   const products = useProducts();
   const countries = useCountries();
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: { code: "", number: "" }, 
+    phone: { code: "", number: "" },
     country: "",
     street: "",
     city: "",
@@ -61,6 +63,11 @@ export default function HowToOrder() {
     );
     setFormData({ ...formData, items: updatedItems });
   };
+  const calculateTotal = () => {
+    return formData.items
+      .reduce((sum, item) => sum + item.price * item.quantity, 0)
+      .toFixed(2);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,14 +75,75 @@ export default function HowToOrder() {
     if (selectedItems.length === 0) {
       error();
       return;
+    } else {
+      setLoading(true);
+      emailjs
+        .send(
+          import.meta.env.VITE_EMAIL_SERVICE_NAME,
+          import.meta.env.VITE_EMAIL_TEMPLATE,
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            from_code: formData.phone.code,
+            from_phone: formData.phone.number,
+            from_country: formData.country,
+            from_street: formData.street,
+            from_city: formData.city,
+            from_postcode: formData.postCode,
+            from_items: formData.items
+              .filter((item) => item.quantity > 0)
+              .map(
+                (item) =>
+                  `${item.name} (x${item.quantity}) - $${
+                    item.price * item.quantity
+                  }`
+              )
+              .join(", "),
+            from_total: calculateTotal(),
+          },
+          import.meta.env.VITE_EMAIL_PRIVATE_KEY
+        )
+        .then(
+          () => {
+            setLoading(false);
+            success();
+            setFormData({
+              name: "",
+              email: "",
+              phone: { code: "", number: "" },
+              country: "",
+              street: "",
+              city: "",
+              postCode: "",
+              items: products.map((product) => ({
+                id: product.id,
+                name: product.name,
+                price: parseFloat(product.price.replace("$", "")),
+                quantity: " ",
+              })),
+            });
+          },
+          (error) => {
+            setLoading(false);
+            messageApi.open({
+              type: "warning",
+              content: (
+                <>
+                  {t("how_to_order.messages.warning")}{" "}
+                  <a
+                    href="https://tawk.to/chat/67876644825083258e054b51/1ihkef022"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("how_to_order.messages.supportTeam")}
+                  </a>
+                  .
+                </>
+              ),
+            });
+          }
+        );
     }
-    success();
-  };
-
-  const calculateTotal = () => {
-    return formData.items
-      .reduce((sum, item) => sum + item.price * item.quantity, 0)
-      .toFixed(2); 
   };
 
   const current = (() => {
@@ -104,9 +172,7 @@ export default function HowToOrder() {
     <div className={styles.howToOrder}>
       {contextHolder}
       <h1 className={styles.title}>{t("how_to_order.title")}</h1>
-      <p className={styles.disclaimer}>
-      {t("how_to_order.disclaimer")}
-      </p>
+      <p className={styles.disclaimer}>{t("how_to_order.disclaimer")}</p>
       <div className={styles.stepsWrapper}>
         <Steps
           className={styles.steps}
@@ -114,22 +180,21 @@ export default function HowToOrder() {
           items={[
             {
               title: t("how_to_order.steps.step1_title"),
-              description: t("how_to_order.steps.step1_description")
+              description: t("how_to_order.steps.step1_description"),
             },
             {
               title: t("how_to_order.steps.step2_title"),
-              description: t("how_to_order.steps.step2_description")
+              description: t("how_to_order.steps.step2_description"),
             },
             {
               title: t("how_to_order.steps.step3_title"),
-              description: t("how_to_order.steps.step3_description")
-            }
+              description: t("how_to_order.steps.step3_description"),
+            },
           ]}
         />
       </div>
       <form className={styles.orderForm} onSubmit={handleSubmit}>
         <div className={styles.formGroupWrapper}>
-   
           <div className={styles.formGroup}>
             <label htmlFor="name">{t("how_to_order.form.name_label")}</label>
             <input
@@ -143,7 +208,6 @@ export default function HowToOrder() {
             />
           </div>
 
-         
           <div className={styles.formGroup}>
             <label htmlFor="email">{t("how_to_order.form.email_label")}</label>
             <input
@@ -158,7 +222,9 @@ export default function HowToOrder() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="country">{t("how_to_order.form.country_label")}</label>
+            <label htmlFor="country">
+              {t("how_to_order.form.country_label")}
+            </label>
             <select
               id="country"
               name="country"
@@ -166,7 +232,9 @@ export default function HowToOrder() {
               onChange={handleChange}
               required
             >
-              <option value="">{t("how_to_order.form.country_placeholder")}</option>
+              <option value="">
+                {t("how_to_order.form.country_placeholder")}
+              </option>
               {countries.map((country, index) => (
                 <option key={index} value={country.name}>
                   {country.name}
@@ -185,7 +253,9 @@ export default function HowToOrder() {
                 className={styles.phoneCode}
                 required
               >
-                <option value="">{t("how_to_order.form.phone_code_placeholder")}</option>
+                <option value="">
+                  {t("how_to_order.form.phone_code_placeholder")}
+                </option>
                 {countries.map((country, index) => (
                   <option key={index} value={country.code}>
                     {country.code} ({country.name})
@@ -204,9 +274,10 @@ export default function HowToOrder() {
             </div>
           </div>
 
-        
           <div className={styles.formGroup}>
-            <label htmlFor="postCode">{t("how_to_order.form.post_code_label")}</label>
+            <label htmlFor="postCode">
+              {t("how_to_order.form.post_code_label")}
+            </label>
             <input
               type="text"
               id="postCode"
@@ -230,7 +301,9 @@ export default function HowToOrder() {
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="street">{t("how_to_order.form.street_label")}</label>
+            <label htmlFor="street">
+              {t("how_to_order.form.street_label")}
+            </label>
             <input
               type="text"
               id="street"
@@ -243,7 +316,6 @@ export default function HowToOrder() {
           </div>
         </div>
 
- 
         <div className={styles.productSelection}>
           {products.map((product) => (
             <div key={product.id} className={styles.productItem}>
@@ -274,17 +346,18 @@ export default function HowToOrder() {
 
         <div>
           <div className={styles.totalPrice}>
-            <h3>{t("how_to_order.product.total_price")} ${calculateTotal()}</h3>
+            <h3>
+              {t("how_to_order.product.total_price")} ${calculateTotal()}
+            </h3>
           </div>
 
           <button type="submit" className={styles.submitButton}>
-          {t("how_to_order.buttons.submit")}
+            {loading
+              ? `${t("how_to_order.buttons.sending")}`
+              : `${t("how_to_order.buttons.submit")}`}
           </button>
         </div>
       </form>
     </div>
   );
 }
-
-
-

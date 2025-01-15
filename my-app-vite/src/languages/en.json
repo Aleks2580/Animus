@@ -208,11 +208,14 @@
       "total_price": "Total:"
     },
     "buttons": {
-      "submit": "Submit Order"
+      "submit": "Submit Order",
+      "sending": "Sending..."
     },
     "messages": {
       "success": "Thank you! We will get back to you shortly.",
-      "error": "Please select at least one product to order."
+      "error": "Please select at least one product to order.",
+      "warning": "We’re sorry, a technical error has occurred. Please contact our support team for assistance through the chat on our website or by clicking on the following link:",
+      "supportTeam": "Support Team"
     }
   }
 }

@@ -45,7 +45,7 @@
     font-size: 12px;
     letter-spacing: 2px;
     margin-right: 5px;
-    color: #ffffff8c;
+    color: var(--link-color)
    
   }
   

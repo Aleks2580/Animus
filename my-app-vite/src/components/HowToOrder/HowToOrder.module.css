@@ -4,6 +4,14 @@
     color: var(--order-text-color);
     min-height: 90vh;
   }
+
+  input:-webkit-autofill {
+    background-color: var(--order-input-background) !important; /* Keep custom background color */
+    color: var(--order-input-text-color) !important; /* Ensure consistent text color */
+    box-shadow: 0 0 0px 1000px var(--order-input-background) inset !important; /* Mask autofill background */
+    -webkit-text-fill-color: var(--order-input-text-color) !important; /* Fix autofill text color */
+  }
+  
   
   .title {
     text-align: center;
@@ -141,6 +149,7 @@
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    width: 150px;
   }
   
   .submitButton:hover {
