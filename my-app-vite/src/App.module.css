@@ -21,4 +21,12 @@
   .floatButton {
     margin-bottom: 100px;
   }
-  
+
+.skeletonFullPage {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--products-background); /* Match theme background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -12,4 +12,10 @@
     width: 25px;
     margin-left: 10px;
     cursor: pointer;
+    
+}
+
+.link {
+    text-decoration: none;
+    color: var(--subhero-icon-color);
 }

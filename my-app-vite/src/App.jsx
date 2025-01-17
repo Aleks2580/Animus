@@ -1,28 +1,42 @@
 import "./theme.css";
-import React, { useState, createContext, useEffect, useContext } from "react";
+import React, {
+  useState,
+  createContext,
+  useContext,
+  useEffect,
+  lazy,
+  Suspense,
+} from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import i18n from "i18next";
 import { BulbOutlined } from "@ant-design/icons";
 import HeroSection from "./components/HeroSection/Hero";
-import SubHero from "./components/SubHero/SubHero";
+// import SubHero from "./components/SubHero/SubHero";
 import Navbar from "./components/Navbar/Navbar";
-import { FloatButton } from "antd";
+import { FloatButton, Skeleton, Spin } from "antd";
 import Footer from "./components/Footer/Footer";
-import Products from "./components/Products/Products";
+// import Products from "./components/Products/Products";
 import ContactIcons from "./components/ContactIcons/ContactIcons";
-import ProductPage from "./components/Products/ProductPage";
-import Faq from "./components/Faq/Faq";
-import Blog from "./components/Blog/Blog";
-import About from "./components/About/About";
-import HowToOrder from "./components/HowToOrder/HowToOrder";
+// import ProductPage from "./components/Products/ProductPage";
+// import Faq from "./components/Faq/Faq";
+// import Blog from "./components/Blog/Blog";
+// import About from "./components/About/About";
+// import HowToOrder from "./components/HowToOrder/HowToOrder";
 import styles from "./App.module.css";
-import BlogPage from "./components/Blog/BlogPage";
+// import BlogPage from "./components/Blog/BlogPage";
 import ScrollToTop from "./components/ScrollToTop";
 
-
-
-
 export const ThemeContext = createContext();
+
+// const HeroSection = lazy(() => import("./components/HeroSection/Hero"));
+const About = lazy(() => import("./components/About/About"));
+const SubHero = lazy(() => import("./components/SubHero/SubHero"));
+const Products = lazy(() => import("./components/Products/Products"));
+const HowToOrder = lazy(() => import("./components/HowToOrder/HowToOrder"));
+const ProductPage = lazy(() => import("./components/Products/ProductPage"));
+const Blog = lazy(() => import("./components/Blog/Blog"));
+const BlogPage = lazy(() => import("./components/Blog/BlogPage"));
+const Faq = lazy(() => import("./components/Faq/Faq"));
 
 function Layout() {
   return (
@@ -39,33 +53,30 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(
     localStorage.getItem("language") || "zh-CN"
   );
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "dark"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
 
   const handleLanguage = () => {
-    const newLanguage = selectedLanguage === "en-US" ? "zh-CN" : "en-US"; 
+    const newLanguage = selectedLanguage === "en-US" ? "zh-CN" : "en-US";
     localStorage.setItem("language", newLanguage);
-    setSelectedLanguage(newLanguage); 
-    i18n.changeLanguage(newLanguage); 
+    setSelectedLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.body.setAttribute("data-theme", newTheme); 
+    document.body.setAttribute("data-theme", newTheme);
   };
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className={styles.app}>
         <div className={styles.switches}>
-         
           <BulbOutlined
             style={{
               fontSize: "16px",
@@ -75,13 +86,12 @@ function App() {
             onClick={toggleTheme}
           />
 
-        
           <span className={styles.language} onClick={handleLanguage}>
             {selectedLanguage === "en-US" ? "中文" : "EN"}
           </span>
         </div>
         <ScrollToTop />
-   
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
@@ -89,19 +99,98 @@ function App() {
               element={
                 <>
                   <HeroSection />
+
                   <div id="subhero">
-                    <SubHero />
+                    <Suspense fallback={<Skeleton active />}>
+                      <SubHero />
+                    </Suspense>
                   </div>
                 </>
               }
             />
-            <Route path="products" element={<Products />} />
-            <Route path="products/:productName" element={<ProductPage />} />
-            <Route path="about" element={<About />} />
-            <Route path="order" element={<HowToOrder />} />
-            <Route path="blogs" element={<Blog />} />
-            <Route path="blogs/:blogId" element={<BlogPage />} />
-            <Route path="faq" element={<Faq />} />
+            <Route
+              path="products"
+              element={
+                <Suspense
+                fallback={
+                  <div className={styles.skeletonFullPage}>
+                    <Skeleton.Node active style={{ width: "100vw", height: "90vh" }} />
+                  </div>
+                }
+              >
+                <Products />
+              </Suspense>
+              }
+            />
+            <Route
+              path="products/:productName"
+              element={
+                <Suspense fallback={
+                  <div className={styles.skeletonFullPage}>
+                  <Skeleton.Node active />
+                </div>
+                }>
+                  <ProductPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="about"
+              element={
+                <Suspense fallback={
+                  <div className={styles.skeletonFullPage}>
+                  <Skeleton.Node active style={{ width: "100vw", height: "90vh" }}  />
+                </div>
+                }>
+                  <About />
+                </Suspense>
+              }
+            />
+            <Route
+              path="order"
+              element={
+                <Suspense fallback={
+                  <div className={styles.skeletonFullPage}>
+                  <Skeleton.Node active style={{ width: "100vw", height: "90vh" }}  />
+                </div>
+                }>
+                  <HowToOrder />
+                </Suspense>
+              }
+            />
+            <Route
+              path="blogs"
+              element={
+                <Suspense fallback={
+                  <div className={styles.skeletonFullPage}>
+                  <Skeleton.Node active style={{ width: "100vw", height: "90vh" }}  />
+                </div>
+                }>
+                  <Blog />
+                </Suspense>
+              }
+            />
+            <Route
+              path="blogs/:blogId"
+              element={
+                <Suspense fallback={
+                  <div className={styles.skeletonFullPage}>
+                  <Skeleton.Node active style={{ width: "100vw", height: "90vh" }}  />
+                </div>
+                }>
+                  <BlogPage />
+                </Suspense>
+              }
+            />
+            <Route path="faq" element={
+               <Suspense fallback={
+                <div className={styles.skeletonFullPage}>
+                <Skeleton.Node active style={{ width: "100vw", height: "90vh" }}  />
+              </div>
+               }>
+               <Faq />
+             </Suspense>
+            } />
           </Route>
         </Routes>
 
@@ -112,3 +201,4 @@ function App() {
 }
 
 export default App;
+

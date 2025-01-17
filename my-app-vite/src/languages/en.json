@@ -15,7 +15,7 @@
   },
   "subhero": {
     "title": "Fuel Your Brain, Elevate Your Life",
-    "subtitle": "Welcome to Project V, your gateway to nootropics and innovative solutions for memory, focus, and brain health. Unlock your cognitive potential and redefine what your mind can achieve.",
+    "subtitle": "Welcome to Sapientropic, your gateway to nootropics and innovative solutions for memory, focus, and brain health. Unlock your cognitive potential and redefine what your mind can achieve.",
     "icons": {
       "memory": "Memory",
       "focus": "Focus",
@@ -80,7 +80,7 @@
     },
     "about": {
     "title": "Who We Are",
-    "description": "At Project V, we believe in unlocking the full potential of your mind. Specializing in sourcing the most innovative nootropic solutions, we bridge the gap between you and cutting-edge cognitive enhancers. We don't sell – we empower you by connecting you to trusted products and providers.",
+    "description": "At Sapientropic, we believe in unlocking the full potential of your mind. Specializing in sourcing the most innovative nootropic solutions, we bridge the gap between you and cutting-edge cognitive enhancers. We don't sell – we empower you by connecting you to trusted products and providers.",
     "features": {
       "unlock": {
         "title": "Unlock Your Mind",
@@ -137,7 +137,7 @@
     "newZealand": "New Zealand"
   },
 "faqs": {
-    "one": "What is Project V?",
+    "one": "What is Sapientropic?",
     "two": "Do you sell the products directly?",
     "three": "How do I place an order?",
     "four": "Where are you located?",
@@ -149,10 +149,10 @@
     "ten": "How do I contact you for more information?"
   },
   "answers": {
-    "one": "Project V is a logistic service company located in Russia. We specialize in helping customers order pharmaceutical and cognitive-enhancing goods that may not be available in their country. All purchases are for your personal use only.",
+    "one": "Sapientropic is a logistic service company located in Kazakhstan. We specialize in helping customers order pharmaceutical and cognitive-enhancing goods that may not be available in their country. All purchases are for your personal use only.",
     "two": "No, we do not sell products directly. We act on your behalf to seek and purchase products from trusted suppliers based on your individual orders.",
     "three": "You can place an order by visiting our 'How to Order' section, filling out the required form, and we will assist you throughout the process.",
-    "four": "We are located in Russia, facilitating international orders for personal use.",
+    "four": "We are located in Kazakhstan, facilitating international orders for personal use.",
     "five": "Shipping costs depend on the destination. Please contact us directly for a detailed quote based on your location.",
     "six": "Delivery typically takes between 1 to 14 days, depending on your location.",
     "seven": "Yes, we can arrange shipping to most countries. However, it is your responsibility to check the local regulations regarding the import of pharmaceutical goods.",

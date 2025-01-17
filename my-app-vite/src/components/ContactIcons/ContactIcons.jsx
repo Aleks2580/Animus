@@ -7,8 +7,12 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function ContactIcons() {
   return (
     <div className={styles.container}>
+         <a  className={styles.link} href="https://t.me/sapientropic" target="_blank" rel="noopener noreferrer">
         <FaTelegramPlane className={styles.icon} />
+      </a>
+      <a className={styles.link} href="mailto:info@sapientropic.com" target="_blank" rel="noopener noreferrer">
         <MdOutlineAlternateEmail className={styles.icon} />
+      </a>
         {/* <FaXTwitter className={styles.icon}  /> */}
 
     </div>

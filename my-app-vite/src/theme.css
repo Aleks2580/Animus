@@ -160,7 +160,7 @@
 
 
   /*ONE PRODUCT*/
-  --oneproduct-background-color: #1d1d1d;
+  --oneproduct-background-color: #121212;
   --oneproduct-icon-color: #deae66;
   --oneproduct-name-color: #deae66;
   --oneproduct-subname-color: #ffffff;
@@ -187,7 +187,7 @@
   --about-feature-hover-shadow: rgba(255, 255, 255, 0.2);
 
    /*FAQ*/
-   --faq-background-color: #1d1d1d;
+   --faq-background-color: #121212;
    --faq-panel-header-color: #f0f0f0;
    --faq-panel-background-color: #2a2a2a;
    --faq-panel-border-color: #3a3a3a;
@@ -195,7 +195,7 @@
    --faq-collapse-arrow-color: #deae66;
 
    /*HOW TO ORDER*/
-   --order-background-color: #1d1d1d;
+   --order-background-color: #121212;
    --order-title-color: #deae66;
    --order-text-color: #fff;
    --order-label-color: #deae66;
@@ -232,7 +232,7 @@
    --blog-learnmore-btn-hover-background: #e6bb70;
 
    /*ONE BLOG*/
-   --blog-background-color: #1d1d1d;
+   --blog-background-color: #121212;
   --blog-text-color: #f0f0f0;
   --blog-title-color: #deae66;
   --blog-date-color: #aaaaaa;
