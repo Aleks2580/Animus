@@ -15,16 +15,16 @@ export default function Products() {
         const { data, error } = await supabase
           .from("Products")
           .select("*")
-          .eq("language", chosenLanguage); // Filter by language
+          .eq("language", chosenLanguage)
+          .eq("instock", true) // Filter by language
 
         if (error) {
-          console.error("Error fetching data:", error);
+          throw new Error("Error fetching product:", error);
         } else {
-          console.log("Fetched data:", data);
           setProducts(data); 
         }
       } catch (err) {
-        console.error("Unexpected error:", err);
+        throw new Error("Error fetching product:", error);
       } finally {
         setLoading(false);
       }
@@ -43,7 +43,7 @@ export default function Products() {
         />
             </div>
           ))
-        : products.map((product) => (
+        : products?.map((product) => (
             <OneProduct key={product.id} {...product} />
           ))}
     </div>

@@ -14,7 +14,6 @@ import { supabase } from "../../supabaseClient";
 const { TabPane } = Tabs;
 
 export default function ProductPage() {
-  const chosenLanguage = localStorage.getItem("language") || "zh-CN";
   const { t, i18n } = useTranslation();
   const { productName } = useParams();
   const [product, setProduct] = useState([]);
@@ -32,7 +31,7 @@ export default function ProductPage() {
           .single(); 
 
         if (error) {
-          console.error("Error fetching product:", error);
+          throw new Error(error)
         } else {
           setProduct(data);
         }

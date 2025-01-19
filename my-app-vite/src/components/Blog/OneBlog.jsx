@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 
-export default function OneBlog({id, image, title, date, intro}) {
-  const { t } = useTranslation();
-  const truncatedIntro = intro?.slice(0, 120) + "..."
+export default function OneBlog({id, image, title, created_at, intro, post_id}) {
+  const { t, i18n } = useTranslation();
+  const truncatedIntro =  i18n.language === "en-US" ? intro?.slice(0, 120) + "..." : 
+  intro?.slice(0, 60) + "..."
   return (
-    <Link to={`/blogs/${id}`} className={styles.link}>
+    <Link to={`/blogs/${post_id}`} className={styles.link}>
           <motion.div
             key={id}
             className={styles.card}
@@ -31,7 +32,7 @@ export default function OneBlog({id, image, title, date, intro}) {
               {truncatedIntro}
             </p>
             <p className={styles.cardDate}>
-              {date || "December 20, 2024"}
+              {created_at}
             </p>
             <button className={styles.learnMoreBtn}>{t("blog.learn_more")}</button>
           </motion.div>
