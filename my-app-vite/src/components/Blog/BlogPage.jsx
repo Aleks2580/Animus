@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./BlogPage.module.css";
 import { Link, useParams } from "react-router-dom";
-import { usePosts } from "../../constants/BlogConstants";
 import { Button, Skeleton } from "antd";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { useTranslation } from "react-i18next";

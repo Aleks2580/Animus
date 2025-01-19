@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useProducts } from "../../constants/ProductsConstants";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
 import { IoBodyOutline } from "react-icons/io5";
 import { RiFocus3Line } from "react-icons/ri";
