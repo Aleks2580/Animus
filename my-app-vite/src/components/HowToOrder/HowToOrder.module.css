@@ -99,11 +99,16 @@
   }
   
   .productSelection {
+    /* width: auto; */
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 10px;
   }
+
+  /* .skeletonWrapper {
+    width: 200px;
+  } */
   
   .productItem {
     display: flex;

@@ -1,7 +1,10 @@
 {
   "hero": {
-    "title": "Unlock Your Potential",
-    "description": "Empower your brain with clarity, focus, and boundless creativity."
+    "title": "Unlock Your ",
+    "description": "Empower your brain with clarity, focus, and boundless creativity.",
+    "dynamicText1": "Potential",
+    "dynamicText2": "Creativity",
+    "dynamicText3": "Mind"
   },
   "navbar": {
     "products": "Products",

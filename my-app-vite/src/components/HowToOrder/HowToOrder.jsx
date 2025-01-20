@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCountries } from "../../constants/useCountries";
-import { Steps, message } from "antd";
+import { Steps, message, Skeleton } from "antd";
 import styles from "./HowToOrder.module.css";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
@@ -11,6 +11,7 @@ export default function HowToOrder() {
   const { t, i18n } = useTranslation();
   const countries = useCountries();
   const [loading, setLoading] = useState(false);
+  const [loadingProducts, setLoadingProducts] = useState(true)
   
 
   const [formData, setFormData] = useState({
@@ -47,7 +48,8 @@ export default function HowToOrder() {
       } catch (err) {
         throw new Error("Error fetching product:", error);
       } finally {
-        setLoading(false);
+        // setLoading(false);
+        setLoadingProducts(false)
       }
     };
 
@@ -343,32 +345,43 @@ export default function HowToOrder() {
           </div>
         </div>
 
-        <div className={styles.productSelection}>
-          {formData.items?.map((product) => (
-            <div key={product.id} className={styles.productItem}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className={styles.productImage}
-              />
-              <div className={styles.productInfo}>
-                <p>{product.name}</p>
-                <p className={styles.productPrice}>¥{product.price}</p>
-                <input
-                  type="number"
-                  min="0"
-                
-                  value={product.quantity || 0}
-                  
-                  onChange={(e) =>
-                    handleQuantityChange(product.id, e.target.value)
-                  }
-                  placeholder={t("how_to_order.product.quantity_placeholder")}
+      
+          <div className={styles.productSelection}>
+            {loadingProducts ? (
+             
+            <Skeleton.Node active style={{ width: "237.5px", height: "550px"}} />
+         
+
+             ) : (
+             formData.items?.map((product) => (
+              <div key={product.id} className={styles.productItem}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className={styles.productImage}
                 />
+                <div className={styles.productInfo}>
+                  <p>{product.name}</p>
+                  <p className={styles.productPrice}>¥{product.price}</p>
+                  <input
+                    type="number"
+                    min="0"
+                  
+                    value={product.quantity || 0}
+                    
+                    onChange={(e) =>
+                      handleQuantityChange(product.id, e.target.value)
+                    }
+                    placeholder={t("how_to_order.product.quantity_placeholder")}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            )))
+            }
+         
         </div>
+        
+       
 
         <div>
           <div className={styles.totalPrice}>

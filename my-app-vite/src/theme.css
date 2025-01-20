@@ -3,32 +3,33 @@
 
     /*NAVBAR*/
     --background-color: #fafafa;
-    --text-color: #000000;
+    --text-color: #345764;
     --link-color: #345764;
-    --link-hover-color: #7466de;
+    --link-hover-color: #deae66;
     --navbar-background: #ffffff;
     --menu-item-hover: #f2f2f2;
-    --menu-item-selected: #7466de;
+    --menu-item-selected: #deae66;
     --logo-filter: invert(1);
 
     /*HERO*/
-    --hero-text-color: #7466de;
+    /* --hero-text-color: #7466de; */
+    --hero-text-color: #deae66;
 
     /*SUBHERO*//*CONTACTICONS*/
     --subhero-icon-color: #345764;
     --subhero-text-color:  #345764;
-    --subhero-title-color: #7466de;
+    --subhero-title-color: #345764;
     --subhero-icon:  #345764;
     --subhero-gradient: linear-gradient(
       to right bottom,
-      rgba(255, 255, 255, 0.846),
-      rgba(255, 255, 255, 0.826)
+      rgba(255, 255, 255, 0.738),
+      rgba(255, 255, 255, 0.274)
   );
 
     /*PRODUCTS*/
 
     --products-background: #fafafa;
-    --products-name-color: #7466de;
+    --products-name-color: #deae66;
     --products-description-color: #345764;
 
 
@@ -39,84 +40,84 @@
     --oneproduct-name-color: #7466de;
     --oneproduct-subname-color: #000000; */
     --oneproduct-background-color: #fafafa;
-    --oneproduct-icon-color: #7466de;
-    --oneproduct-name-color: #7466de;
+    --oneproduct-icon-color: #deae66;
+    --oneproduct-name-color: #deae66;
     --oneproduct-subname-color: #000000;
-    --oneproduct-price-color: #7466de;
+    --oneproduct-price-color: #deae66;
     --oneproduct-instock-color: #90ee90;
-    --oneproduct-button-background: #7466de;
+    --oneproduct-button-background: #deae66;
     --oneproduct-button-text-color: #ffffff;
     --oneproduct-disclaimer-color: #7a7a7a;
-    --oneproduct-morelink-color: #7466de;
+    --oneproduct-morelink-color: #deae66;
     --oneproduct-tabs-background: #ffffff;
     --oneproduct-tabs-text-color: #000000;
-    --oneproduct-tabs-active-color: #7466de;
+    --oneproduct-tabs-active-color: #deae66;
     --oneproduct-tabs-shadow: rgba(0, 0, 0, 0.1);
     --oneproduct-text-color: #000000; /* General text */
     --oneproduct-section-shadow: rgba(0, 0, 0, 0.1); /* Shadows for sections */
 
     /*ABOUT*/
 --about-background-gradient: linear-gradient(to right bottom, rgba(255, 255, 255, 0.949), rgba(255, 255, 255, 0.876));
---about-title-color: #7466de;
+--about-title-color: #deae66;
 --about-description-color: #000000;
---about-icon-color: #7466de;
+--about-icon-color: #deae66;
 --about-feature-background: rgba(0, 0, 0, 0.05);
 --about-feature-text-color: #000000;
 --about-feature-hover-shadow: rgba(0, 0, 0, 0.2);
 
   /*FAQ*/
   --faq-background-color: #fafafa;
-  --faq-panel-header-color: #7466de;
+  --faq-panel-header-color:#000000;
   --faq-panel-background-color: #ffffff;
   --faq-panel-border-color: #e0e0e0;
   --faq-panel-content-color: #000000;
-  --faq-collapse-arrow-color: #7466de;
+  --faq-collapse-arrow-color: #deae66;
 
   /*HOW TO ORDER*/
   --order-background-color: #fafafa;
-  --order-title-color: #7466de;
+  --order-title-color: #deae66;
   --order-text-color: #000000;
-  --order-label-color: #7466de;
+  --order-label-color: #deae66;
   --order-input-background: #ffffff;
   --order-input-text-color: #000000;
   --order-input-border-color: #ccc;
-  --order-input-focus-color: #7466de;
+  --order-input-focus-color: #deae66;
   --order-product-border-color: #ccc;
-  --order-product-price-color: #7466de;
-  --order-total-price-color: #7466de;
-  --order-button-background: #7466de;
+  --order-product-price-color:#deae66;
+  --order-total-price-color: #deae66;
+  --order-button-background: #deae66;
   --order-button-text-color: #ffffff;
-  --order-button-hover-background: #8a84da;
-  --order-steps-title-color: #7466de;
+  --order-button-hover-background: #deae66;
+  --order-steps-title-color: #deae66;
   --order-steps-description-color: #000000;
   --order-steps-current-title-color: #ccc;
   --order-steps-current-description-color: #ffffff;
-  --order-steps-finish-title-color: #7466de;
-  --order-steps-finish-description-color: #7466de;
+  --order-steps-finish-title-color: #deae66;
+  --order-steps-finish-description-color: #deae66;
   --order-steps-wait-title-color: #ccc;
   --order-steps-wait-description-color: #ccc;
 
   /*BLOGS*/
   --blog-card-background: #ffffff;
   --blog-card-border-color: #e0e0e0;
-  --blog-card-hover-border-color: #7466de;
+  --blog-card-hover-border-color: #deae66;
   --blog-card-hover-shadow: rgba(116, 102, 222, 0.3);
   --blog-card-title-color: #000000;
   --blog-card-excerpt-color: #555555;
   --blog-card-date-color: #777777;
-  --blog-learnmore-btn-background: #7466de;
+  --blog-learnmore-btn-background: #deae66;
   --blog-learnmore-btn-text-color: #ffffff;
-  --blog-learnmore-btn-hover-background: #8a84da;
+  --blog-learnmore-btn-hover-background: #deae66;
 
 
     /*ONE BLOG*/
     --blog-background-color: #fafafa;
   --blog-text-color: #000000;
-  --blog-title-color: #1a73e8;
+  --blog-title-color: #deae66;
   --blog-date-color: #555555;
   --blog-heading-color: #333333;
   --blockquote-background: #f9f9f9;
-  --blockquote-border-color: #1a73e8;
+  --blockquote-border-color: #deae66;
   --blockquote-text-color: #555555;
   --error-text-color: #ff0000;
   }

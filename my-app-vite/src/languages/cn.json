@@ -1,7 +1,10 @@
 {
   "hero": {
-    "title": "释放你的潜能",
-    "description": "用清晰、专注和无限的创造力赋予你的大脑力量。"
+    "title": "释放你的",
+    "description": "用清晰、专注和无限的创造力赋予你的大脑力量。",
+    "dynamicText1": "潜力",
+    "dynamicText2": "创造力",
+    "dynamicText3": "思维"
   },
   "navbar": {
     "products": "产品",
