@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import { useProducts } from "../../constants/ProductsConstants";
+import React, { useState, useEffect } from "react";
 import { useCountries } from "../../constants/useCountries";
 import { Steps, message } from "antd";
 import styles from "./HowToOrder.module.css";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import { supabase } from "../../supabaseClient";
+
 
 export default function HowToOrder() {
-  const { t } = useTranslation();
-  const products = useProducts();
+  const { t, i18n } = useTranslation();
   const countries = useCountries();
   const [loading, setLoading] = useState(false);
+  
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,13 +21,38 @@ export default function HowToOrder() {
     street: "",
     city: "",
     postCode: "",
-    items: products.map((product) => ({
-      id: product.id,
-      name: product.name,
-      price: parseFloat(product.price.replace("$", "")),
-      quantity: " ",
-    })),
+    items: [],
   });
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("Products")
+          .select("id, name, price, image")
+          .eq("language", i18n.language)
+          .eq("instock", true); 
+
+        if (error) {
+          throw new Error("Error fetching product:", error);
+        } else {
+          setFormData({...formData, items: data.map((product) => ({
+                id: product.id,
+                name: product.name,
+                image: product.image,
+                price: parseFloat(product.price.replace("¥", "")),
+                quantity: 0,
+              }))})
+        }
+      } catch (err) {
+        throw new Error("Error fetching product:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -59,10 +85,13 @@ export default function HowToOrder() {
 
   const handleQuantityChange = (id, quantity) => {
     const updatedItems = formData.items.map((item) =>
-      item.id === id ? { ...item, quantity: parseInt(quantity, 10) || 0 } : item
+      item.id === id
+        ? { ...item, quantity: quantity === "" ? 0 : parseInt(quantity, 10) }
+        : item
     );
     setFormData({ ...formData, items: updatedItems });
   };
+
   const calculateTotal = () => {
     return formData.items
       .reduce((sum, item) => sum + item.price * item.quantity, 0)
@@ -94,7 +123,7 @@ export default function HowToOrder() {
               .filter((item) => item.quantity > 0)
               .map(
                 (item) =>
-                  `${item.name} (x${item.quantity}) - $${
+                  `${item.name} (x${item.quantity}) - ¥${
                     item.price * item.quantity
                   }`
               )
@@ -115,11 +144,9 @@ export default function HowToOrder() {
               street: "",
               city: "",
               postCode: "",
-              items: products.map((product) => ({
-                id: product.id,
-                name: product.name,
-                price: parseFloat(product.price.replace("$", "")),
-                quantity: " ",
+              items: formData.items.map((product) => ({
+                ...product,
+                quantity: 0,
               })),
             });
           },
@@ -317,7 +344,7 @@ export default function HowToOrder() {
         </div>
 
         <div className={styles.productSelection}>
-          {products.map((product) => (
+          {formData.items?.map((product) => (
             <div key={product.id} className={styles.productItem}>
               <img
                 src={product.image}
@@ -326,14 +353,13 @@ export default function HowToOrder() {
               />
               <div className={styles.productInfo}>
                 <p>{product.name}</p>
-                <p className={styles.productPrice}>{product.price}</p>
+                <p className={styles.productPrice}>¥{product.price}</p>
                 <input
                   type="number"
                   min="0"
-                  value={
-                    formData.items.find((item) => item.id === product.id)
-                      .quantity
-                  }
+                
+                  value={product.quantity || 0}
+                  
                   onChange={(e) =>
                     handleQuantityChange(product.id, e.target.value)
                   }
@@ -347,7 +373,7 @@ export default function HowToOrder() {
         <div>
           <div className={styles.totalPrice}>
             <h3>
-              {t("how_to_order.product.total_price")} ${calculateTotal()}
+              {t("how_to_order.product.total_price")} ¥{calculateTotal()}
             </h3>
           </div>
 

@@ -133,7 +133,7 @@
   
   .totalPrice {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     margin: 20px 0;
     color: var(--order-total-price-color);
     font-weight: bold;
