@@ -58,7 +58,7 @@ return loading ? (
     </Link>
     <div className={styles.productSection}>
       <div className={styles.imageWrapper}>
-        <Skeleton.Node active
+        <Skeleton.Node active className={styles.skeleton}
           style={{ width: "300px", height: "300px"}}
         />
       </div>
@@ -67,7 +67,7 @@ return loading ? (
       </div>
     </div>
     <div className={styles.tabs}>
-      <Skeleton active paragraph={{ rows: 4 }} />
+      <Skeleton active paragraph={{ rows: 8 }} />
     </div>
   </div>
 ) : product ? (

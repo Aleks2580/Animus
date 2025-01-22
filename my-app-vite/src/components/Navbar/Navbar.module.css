@@ -30,12 +30,6 @@
     color: var(--link-color)
   }
 
-  .logoV {
-   font-size: 38px;
-   margin-left: 5px;
-   font-weight: bold;
-  }
-
   .logoProject {
     font-size: 28px;
     letter-spacing: 4px;
@@ -159,12 +153,18 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 885px) {
   .link {
-    font-size: 15px;
+    font-size: 12px;
   }
   .wrapper {
-    margin: 0px 50px 0 20px;
+    margin: 0px 40px 0 20px;
+  }
+  .logoProject {
+    font-size: 20px;
+  }
+  .logoSlogan {
+    font-size: 11px;
   }
 }
 

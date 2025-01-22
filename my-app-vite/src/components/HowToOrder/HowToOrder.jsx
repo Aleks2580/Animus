@@ -349,7 +349,7 @@ export default function HowToOrder() {
           <div className={styles.productSelection}>
             {loadingProducts ? (
              
-            <Skeleton.Node active style={{ width: "237.5px", height: "550px"}} />
+            <Skeleton.Node active style={{ width: "237.5px", height: "500px"}} className={styles.sketeton} />
          
 
              ) : (

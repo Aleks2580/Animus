@@ -44,7 +44,7 @@ export default function Blog() {
      ? Array.from({length:4}).map((_, index) => (
       <div key={index} className={styles.skeletonWrapper}>
                   <Skeleton.Node active
-          style={{ width: "300px", height: "450px"}}
+          style={{ width: "300px", height: "450px", backgroundColor: "#f6f5f316"}}
         />
             </div>
      ))

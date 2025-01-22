@@ -7,7 +7,7 @@
     align-items: center;
     background-image: 
     var(--subhero-gradient),
-    url('/subhero.jpg');
+    url('/subhero.webp');
   background-size: cover;
   background-position: top;
 }

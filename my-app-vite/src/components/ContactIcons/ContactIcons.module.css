@@ -8,14 +8,38 @@
 }
 
 .icon {
-    height: 25px;
-    width: 25px;
-    margin-left: 10px;
-    cursor: pointer;
-    
+    height: 22px;
+    width: 22px;
+    margin-left: 7px;
+    cursor: pointer;   
+}
+
+.icon:hover {
+   scale: 1.1;   
 }
 
 .link {
     text-decoration: none;
     color: var(--subhero-icon-color);
 }
+
+.iconWechat {
+    height: 22px;
+    width: 22px;
+    margin-left: 7px;
+    cursor: pointer; 
+  }
+
+  .iconWechat:hover {
+    scale: 1.1; 
+  }
+
+  .qrCode {
+    position: absolute;
+    bottom: 160%;
+    right: 5%;
+  }
+
+  .qrImage {
+    width: 120px;
+  }

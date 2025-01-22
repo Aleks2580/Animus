@@ -57,7 +57,7 @@
     --oneproduct-section-shadow: rgba(0, 0, 0, 0.1); /* Shadows for sections */
 
     /*ABOUT*/
---about-background-gradient: linear-gradient(to right bottom, rgba(255, 255, 255, 0.949), rgba(255, 255, 255, 0.876));
+--about-background-gradient: linear-gradient(to right bottom, rgba(255, 255, 255, 0.603), rgba(255, 255, 255, 0.724));
 --about-title-color: #deae66;
 --about-description-color: #000000;
 --about-icon-color: #deae66;
@@ -154,7 +154,7 @@
 
    /*PRODUCTS*/
 
-   --products-background: #121212;
+   --products-background: #000000;
    --products-name-color: #deae66;
    --products-description-color: #ccc;
 
@@ -188,7 +188,7 @@
   --about-feature-hover-shadow: rgba(255, 255, 255, 0.2);
 
    /*FAQ*/
-   --faq-background-color: #121212;
+   --faq-background-color: #000000;
    --faq-panel-header-color: #f0f0f0;
    --faq-panel-background-color: #2a2a2a;
    --faq-panel-border-color: #3a3a3a;
@@ -196,7 +196,7 @@
    --faq-collapse-arrow-color: #deae66;
 
    /*HOW TO ORDER*/
-   --order-background-color: #121212;
+   --order-background-color: #000000;
    --order-title-color: #deae66;
    --order-text-color: #fff;
    --order-label-color: #deae66;

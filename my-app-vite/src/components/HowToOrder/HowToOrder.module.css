@@ -109,6 +109,11 @@
   /* .skeletonWrapper {
     width: 200px;
   } */
+
+  .sketeton {
+    margin-top: 15px;
+    background-color: #fffffe23;
+  }
   
   .productItem {
     display: flex;

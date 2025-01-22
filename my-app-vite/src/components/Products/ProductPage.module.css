@@ -199,6 +199,7 @@
   color: var(--oneproduct-tabs-text-color);
 }
 
+
 :global(.ant-tabs-tab) {
   color: var(--oneproduct-tabs-text-color) !important;
 }

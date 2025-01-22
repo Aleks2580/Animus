@@ -24,14 +24,14 @@ const HeroSection = () => {
         key={animationKey}
           sequence={[
             t("hero.dynamicText1"), // Add any dynamic or static text from your translations
-            1000,
+            2000,
             t("hero.dynamicText2"), // Another text to type after a pause
-            1000,
+            2000,
             t("hero.dynamicText3"),
-            1000
+            2000
           ]}
           wrapper="span"
-          speed={20} // Adjust speed of typing
+          speed={1} // Adjust speed of typing
           cursor={true} // Show the typing cursor
           repeat={Infinity} // Optional, make it loop infinitely
         />

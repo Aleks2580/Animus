@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: var(--about-background-gradient), url('/about.jpg');
+    background-image: var(--about-background-gradient), url('/about.webp');
     background-size:auto;
     background-position: top;
   }
