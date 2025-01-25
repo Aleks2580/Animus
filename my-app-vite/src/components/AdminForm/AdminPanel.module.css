@@ -1,0 +1,32 @@
+.main {
+    padding-top: 10vh;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navAdmin {
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.adminLink {
+    text-decoration: none;
+    color: #345764;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 130px;
+    text-align: center;
+}
+
+.content {
+    width: 80vw;
+}

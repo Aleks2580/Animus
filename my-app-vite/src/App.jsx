@@ -2,7 +2,6 @@ import "./theme.css";
 import React, {
   useState,
   createContext,
-  useContext,
   useEffect,
   lazy,
   Suspense,
@@ -11,24 +10,17 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import i18n from "i18next";
 import { BulbOutlined } from "@ant-design/icons";
 import HeroSection from "./components/HeroSection/Hero";
-// import SubHero from "./components/SubHero/SubHero";
 import Navbar from "./components/Navbar/Navbar";
 import { FloatButton, Skeleton, Spin } from "antd";
 import Footer from "./components/Footer/Footer";
-// import Products from "./components/Products/Products";
 import ContactIcons from "./components/ContactIcons/ContactIcons";
-// import ProductPage from "./components/Products/ProductPage";
-// import Faq from "./components/Faq/Faq";
-// import Blog from "./components/Blog/Blog";
-// import About from "./components/About/About";
-// import HowToOrder from "./components/HowToOrder/HowToOrder";
 import styles from "./App.module.css";
-// import BlogPage from "./components/Blog/BlogPage";
 import ScrollToTop from "./components/ScrollToTop";
+import AdminPanel from "./components/AdminForm/AdminPanel";
+import AddProduct from "./components/AdminForm/AddProduct";
 
-export const ThemeContext = createContext();
 
-// const HeroSection = lazy(() => import("./components/HeroSection/Hero"));
+
 const About = lazy(() => import("./components/About/About"));
 const SubHero = lazy(() => import("./components/SubHero/SubHero"));
 const Products = lazy(() => import("./components/Products/Products"));
@@ -48,6 +40,9 @@ function Layout() {
     </>
   );
 }
+
+export const ThemeContext = createContext();
+
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(
@@ -108,6 +103,10 @@ function App() {
                 </>
               }
             />
+            <Route path="/admin" element={<AdminPanel/>}>
+               <Route path="add-product" element={<AddProduct/>}/>
+         
+            </Route>
             <Route
               path="products"
               element={

@@ -171,7 +171,7 @@
   line-height: 1.6;
   font-size: 16px; 
   font-weight: 400;
-  text-align: justify;
+  text-align: left;
   min-height: 1000px; 
 
 }
@@ -197,6 +197,11 @@
 .productText li {
   font-size: 16px;
   color: var(--oneproduct-tabs-text-color);
+}
+
+.productText a {
+  text-decoration: none;
+  color: #deae66;
 }
 
 
