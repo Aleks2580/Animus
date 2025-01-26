@@ -18,6 +18,8 @@ import styles from "./App.module.css";
 import ScrollToTop from "./components/ScrollToTop";
 import AdminPanel from "./components/AdminForm/AdminPanel";
 import AddProduct from "./components/AdminForm/AddProduct";
+import DeleteProduct from "./components/AdminForm/DeleteProduct";
+import EditProduct from "./components/AdminForm/EditProduct";
 
 
 
@@ -105,6 +107,8 @@ function App() {
             />
             <Route path="/admin" element={<AdminPanel/>}>
                <Route path="add-product" element={<AddProduct/>}/>
+               <Route path="delete-product" element={<DeleteProduct/>}/>
+               <Route path="edit-product" element={<EditProduct/>}/>
          
             </Route>
             <Route

@@ -23,7 +23,7 @@ export default function Products() {
         } else {
           setProducts(data); 
         }
-      } catch (err) {
+      } catch (error) {
         throw new Error("Error fetching product:", error);
       } finally {
         setLoading(false);

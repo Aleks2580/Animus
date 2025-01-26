@@ -14,7 +14,7 @@ export default function AdminPanel() {
         <Link className={styles.adminLink} to="edit-post">EDIT POST</Link>
       </nav>
       <div className={styles.content}>
-        <Outlet /> {/* Render nested routes here */}
+        <Outlet /> 
       </div>
     </div>
   )
